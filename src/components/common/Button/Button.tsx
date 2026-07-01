@@ -31,10 +31,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg hover:scale-105 hover:shadow-cyan-500/30",
 
             variant === "secondary" &&
-              "border border-white/10 bg-white/5 backdrop-blur-xl text-white hover:bg-white/10",
+              "border border-slate-900/10 bg-slate-900/5 backdrop-blur-xl text-slate-900 hover:bg-slate-900/10",
 
             variant === "ghost" &&
-              "text-white hover:bg-white/5"
+              "text-slate-900 hover:bg-slate-900/5"
           ),
           className
         )}

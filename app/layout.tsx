@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Urbanist, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/src/components/common/Navbar/Navbar";
 import Footer from "@/src/components/common/Footer/Footer";
-import CTA from "@/src/components/common/CTA/CTA";
+
+const urbanist = Urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "AP2L",
@@ -15,11 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning className={`${urbanist.variable} ${inter.variable}`}>
+      <body suppressHydrationWarning className="font-sans">
         <Navbar />
         <main>{children}</main>
-        <CTA />
         <Footer />
       </body>
     </html>

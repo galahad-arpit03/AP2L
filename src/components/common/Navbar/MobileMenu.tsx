@@ -31,7 +31,7 @@ export default function MobileMenu() {
 
       <button
         onClick={() => setOpen(true)}
-        className="rounded-xl border border-white/10 bg-white/5 p-2 text-white backdrop-blur lg:hidden"
+        className="rounded-xl border border-slate-900/10 bg-slate-900/5 p-2 text-slate-900 backdrop-blur lg:hidden"
       >
         <Menu size={22} />
       </button>
@@ -59,29 +59,29 @@ export default function MobileMenu() {
                 duration: 0.35,
                 ease: "easeInOut",
               }}
-              className="fixed right-0 top-0 z-50 flex h-screen w-[340px] flex-col border-l border-white/10 bg-[#0B0B14]/95 backdrop-blur-3xl"
+              className="fixed right-0 top-0 z-50 flex h-screen w-[340px] flex-col border-l border-slate-900/10 bg-white/95 backdrop-blur-3xl"
             >
               {/* Header */}
 
-              <div className="flex items-center justify-between border-b border-white/10 p-6">
+              <div className="flex items-center justify-between border-b border-slate-900/10 p-6">
 
                 <div>
-                  <h2 className="text-xl font-semibold text-white">
+                  <h2 className="text-xl font-semibold text-slate-900">
                     Navigation
                   </h2>
 
-                  <p className="mt-1 text-sm text-zinc-400">
+                  <p className="mt-1 text-sm text-slate-600">
                     Explore AP2L
                   </p>
                 </div>
 
                 <button
                   onClick={() => setOpen(false)}
-                  className="rounded-lg p-2 transition hover:bg-white/5"
+                  className="rounded-lg p-2 transition hover:bg-slate-900/5"
                 >
                   <X
                     size={22}
-                    className="text-white"
+                    className="text-slate-900"
                   />
                 </button>
               </div>
@@ -108,7 +108,7 @@ export default function MobileMenu() {
                         className={`mb-2 flex items-center justify-between rounded-2xl px-4 py-3 transition-all ${
                           active
                             ? "bg-violet-600/20 text-violet-300"
-                            : "text-white hover:bg-white/5"
+                            : "text-slate-900 hover:bg-slate-900/5"
                         }`}
                       >
                         {item.title}
@@ -127,7 +127,7 @@ export default function MobileMenu() {
                         onClick={() =>
                           toggleSection(item.title)
                         }
-                        className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-white transition hover:bg-white/5"
+                        className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-slate-900 transition hover:bg-slate-900/5"
                       >
                         <span>{item.title}</span>
 
@@ -171,14 +171,14 @@ export default function MobileMenu() {
                                     onClick={() =>
                                       setOpen(false)
                                     }
-                                    className="block rounded-xl p-3 transition hover:bg-white/5"
+                                    className="block rounded-xl p-3 transition hover:bg-slate-900/5"
                                   >
-                                    <h4 className="text-sm font-medium text-white">
+                                    <h4 className="text-sm font-medium text-slate-900">
                                       {child.title}
                                     </h4>
 
                                     {child.description && (
-                                      <p className="mt-1 text-xs leading-5 text-zinc-400">
+                                      <p className="mt-1 text-xs leading-5 text-slate-600">
                                         {
                                           child.description
                                         }
@@ -198,12 +198,12 @@ export default function MobileMenu() {
 
               {/* Footer */}
 
-              <div className="border-t border-white/10 p-6">
+              <div className="border-t border-slate-900/10 p-6">
 
                 <Link
                   href="/book-demo"
                   onClick={() => setOpen(false)}
-                  className="group flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 font-semibold text-white transition hover:scale-[1.02]"
+                  className="group flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 font-semibold text-slate-900 transition hover:scale-[1.02]"
                 >
                   Book Demo
 

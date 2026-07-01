@@ -21,7 +21,7 @@ export default function FooterColumn({
     <div>
       {/* Column Heading */}
 
-      <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-white">
+      <h3 className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-slate-900">
         {title}
       </h3>
 
@@ -44,8 +44,8 @@ export default function FooterColumn({
                 group
                 inline-flex
                 items-center
-                text-[15px]
-                text-zinc-400
+                text-sm
+                text-slate-600
                 transition-all
                 duration-300
                 hover:text-violet-400

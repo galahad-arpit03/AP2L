@@ -12,13 +12,13 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function ProductSuite() {
   return (
-    <section className="py-32 relative bg-[#0B0B14]">
+    <section className="py-32 relative bg-white">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
             {productSuiteData.heading}
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-lg text-slate-600">
             {productSuiteData.description}
           </p>
         </div>
@@ -36,22 +36,22 @@ export default function ProductSuite() {
               >
                 <Link 
                   href={product.href}
-                  className="block group h-full rounded-3xl border border-white/10 bg-white/5 p-8 transition-all hover:bg-white/10 hover:-translate-y-1 relative overflow-hidden"
+                  className="block group h-full rounded-3xl border border-slate-900/10 bg-slate-900/5 p-8 transition-all hover:bg-slate-900/10 hover:-translate-y-1 relative overflow-hidden"
                 >
                   <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${product.color} opacity-20 blur-[50px] rounded-full group-hover:opacity-40 transition-opacity`} />
                   
                   <div className="relative z-10">
-                    <div className="h-14 w-14 rounded-2xl bg-[#1A1A24] border border-white/10 flex items-center justify-center mb-6 shadow-inner">
-                      <Icon className="w-6 h-6 text-white" />
+                    <div className="h-14 w-14 rounded-2xl bg-[#1A1A24] border border-slate-900/10 flex items-center justify-center mb-6 shadow-inner">
+                      <Icon className="w-6 h-6 text-slate-900" />
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-white mb-3 flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3 flex items-center justify-between">
                       {product.name}
-                      <span className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-zinc-400">
+                      <span className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0 text-slate-600">
                         &rarr;
                       </span>
                     </h3>
-                    <p className="text-zinc-400 leading-relaxed">
+                    <p className="text-slate-600 leading-relaxed">
                       {product.description}
                     </p>
                   </div>

@@ -50,14 +50,14 @@ const legalLinks = [
 
 export default function FooterBottom() {
   return (
-    <div className="border-t border-white/10 pt-8">
+    <div className="border-t border-slate-900/10 pt-8">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         {/* Copyright */}
 
         <div className="text-center lg:text-left">
-          <p className="text-sm text-zinc-500">
+          <p className="text-sm text-slate-500">
             © {new Date().getFullYear()}{" "}
-            <span className="font-medium text-white">
+            <span className="font-medium text-slate-900">
               AP2L Technologies
             </span>
             . All rights reserved.
@@ -91,9 +91,9 @@ export default function FooterBottom() {
                   justify-center
                   rounded-full
                   border
-                  border-white/10
-                  bg-white/5
-                  text-zinc-400
+                  border-slate-900/10
+                  bg-slate-900/5
+                  text-slate-600
                   backdrop-blur-xl
                   transition-all
                   duration-300
@@ -118,7 +118,7 @@ export default function FooterBottom() {
               href={link.href}
               className="
                 text-sm
-                text-zinc-500
+                text-slate-500
                 transition-colors
                 duration-300
                 hover:text-violet-400

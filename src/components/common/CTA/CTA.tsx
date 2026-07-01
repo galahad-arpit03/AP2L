@@ -24,12 +24,12 @@ export default function CTA({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-12 backdrop-blur-md"
+          className="max-w-3xl mx-auto rounded-3xl border border-slate-900/10 bg-slate-900/5 p-12 backdrop-blur-md"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             {heading}
           </h2>
-          <p className="text-lg text-zinc-400 mb-10">
+          <p className="text-lg text-slate-600 mb-10">
             {description}
           </p>
           

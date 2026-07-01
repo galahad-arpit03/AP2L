@@ -8,7 +8,7 @@ export default function Trust() {
   return (
     <section className="py-20 border-y border-white/5 bg-[#08080F]">
       <Container>
-        <p className="text-center text-sm font-medium text-zinc-500 mb-10">
+        <p className="text-center text-sm font-medium text-slate-500 mb-10">
           {trustData.heading}
         </p>
         
@@ -20,7 +20,7 @@ export default function Trust() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-xl md:text-2xl font-bold text-zinc-400"
+              className="text-xl md:text-2xl font-bold text-slate-600"
             >
               {company}
             </motion.div>

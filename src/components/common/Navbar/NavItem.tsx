@@ -34,8 +34,8 @@ export default function NavItem({
           duration-300
           ${
             isActive
-              ? "text-white"
-              : "text-zinc-300 group-hover:text-white"
+              ? "text-slate-900"
+              : "text-slate-700 group-hover:text-slate-900"
           }
         `}
       >

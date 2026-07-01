@@ -26,7 +26,7 @@ export default function Dropdown({
     >
       {/* Trigger */}
 
-      <button className="group flex h-12 items-center gap-1 text-[15px] font-medium text-zinc-300 transition duration-300 hover:text-white">
+      <button className="group flex h-12 items-center gap-1 text-[15px] font-medium text-slate-700 transition duration-300 hover:text-slate-900">
         <span>{title}</span>
 
         <ChevronDown
@@ -62,7 +62,7 @@ export default function Dropdown({
                 overflow-hidden
                 rounded-3xl
                 border
-                border-white/10
+                border-slate-900/10
                 bg-[#0E0E18]/95
                 backdrop-blur-3xl
                 shadow-[0_20px_80px_rgba(0,0,0,0.45)]
@@ -99,16 +99,16 @@ export default function Dropdown({
                         p-4
                         transition-all
                         duration-300
-                        hover:bg-white/5
+                        hover:bg-slate-900/5
                       "
                     >
                       <div>
-                        <h4 className="font-semibold text-white transition-colors group-hover/item:text-violet-300">
+                        <h4 className="font-semibold text-slate-900 transition-colors group-hover/item:text-violet-300">
                           {item.title}
                         </h4>
 
                         {item.description && (
-                          <p className="mt-2 text-sm leading-6 text-zinc-400">
+                          <p className="mt-2 text-sm leading-6 text-slate-600">
                             {item.description}
                           </p>
                         )}
@@ -118,7 +118,7 @@ export default function Dropdown({
                         size={18}
                         className="
                           mt-1
-                          text-zinc-500
+                          text-slate-500
                           opacity-0
                           transition-all
                           duration-300
@@ -136,7 +136,7 @@ export default function Dropdown({
               {/* Footer */}
 
               <div className="border-t border-white/5 bg-white/[0.02] px-6 py-4">
-                <p className="text-xs uppercase tracking-[0.22em] text-zinc-500">
+                <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
                   Explore AP2L Solutions
                 </p>
               </div>

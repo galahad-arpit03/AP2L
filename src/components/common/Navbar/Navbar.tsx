@@ -57,8 +57,8 @@ export default function Navbar() {
           className={`relative flex h-16 items-center justify-between rounded-full border px-6 transition-all duration-500 ${
             scrolled
               ? `
-                border-white/10
-                bg-[#0B0B14]/80
+                border-slate-900/10
+                bg-white/80
                 backdrop-blur-2xl
                 shadow-[0_10px_50px_rgba(0,0,0,0.45)]
               `

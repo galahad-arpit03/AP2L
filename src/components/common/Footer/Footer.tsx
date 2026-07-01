@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+
 
 import Container from "../Container/Container";
 import FooterColumn from "./FooterColumn";
@@ -12,7 +11,7 @@ import { footerSections } from "./footerData";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#070710]">
+    <footer className="relative overflow-hidden border-t border-slate-900/10 bg-white">
       {/* ================= Background ================= */}
 
       <div className="absolute inset-0 overflow-hidden">
@@ -25,66 +24,9 @@ export default function Footer() {
 
       <Container className="relative z-10">
 
-        {/* ================= CTA ================= */}
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="py-24"
-        >
-          <div className="overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-violet-600/20 via-white/5 to-fuchsia-600/20 p-[1px]">
-
-            <div className="rounded-[36px] bg-[#0B0B14]/95 px-10 py-14 backdrop-blur-3xl">
-
-              <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-
-                <div>
-
-                  <h2 className="max-w-2xl text-4xl font-bold leading-tight text-white lg:text-5xl">
-                    Ready to transform your business with AI?
-                  </h2>
-
-                  <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-400">
-                    Empower your organization with intelligent automation,
-                    enterprise AI, cloud solutions, and digital innovation
-                    built for tomorrow.
-                  </p>
-                </div>
-
-                <Link
-                  href="/book-demo"
-                  className="group flex items-center gap-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-8 py-4 text-white shadow-xl transition-all duration-300 hover:scale-105"
-                >
-                  Book a Demo
-
-                  <ArrowUpRight
-                    className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                    size={20}
-                  />
-                </Link>
-
-              </div>
-
-            </div>
-
-          </div>
-        </motion.div>
-
         {/* ================= Footer Grid ================= */}
 
-        <div className="grid gap-16 border-t border-white/10 py-20 lg:grid-cols-[2fr_repeat(4,1fr)]">
+        <div className="grid gap-16 border-t border-slate-900/10 py-20 lg:grid-cols-[2fr_repeat(4,1fr)]">
 
           {/* Left */}
 
@@ -105,19 +47,19 @@ export default function Footer() {
 
               <div>
 
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-slate-900">
                   AP2L
                 </h3>
 
-                <p className="text-sm uppercase tracking-[0.28em] text-zinc-500">
-                  AI Platform
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-slate-500 mt-1">
+                  ApMoSys Products
                 </p>
 
               </div>
 
             </Link>
 
-            <p className="mt-8 max-w-md leading-8 text-zinc-400">
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-slate-600">
               AP2L helps enterprises accelerate digital transformation
               through Artificial Intelligence, Cloud Engineering,
               Automation, Cyber Security, and next-generation software

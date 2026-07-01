@@ -33,7 +33,7 @@ export default function Logo({
         {/* Glow */}
         <div className="absolute inset-0 rounded-full bg-violet-500/40 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
+        <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-slate-900/10 bg-slate-900/5 backdrop-blur-xl">
           <Image
             src="/logo/logo.png"
             alt="AP2L Logo"
@@ -51,10 +51,13 @@ export default function Logo({
           whileHover={{
             x: 2,
           }}
-          className="bg-gradient-to-r from-white via-violet-200 to-violet-400 bg-clip-text text-[1.45rem] font-bold tracking-tight text-transparent"
+          className="text-[1.45rem] font-bold tracking-tight text-black"
         >
           AP2L
         </motion.span>
+        <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.2em] text-slate-600">
+          ApMoSys Products
+        </span>
       </div>
     </Link>
   );
