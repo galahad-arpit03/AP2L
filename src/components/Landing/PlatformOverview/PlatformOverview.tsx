@@ -92,7 +92,7 @@ export default function PlatformOverview() {
   const visibleList = products.slice(1, 5); // Show 4 items in the list
 
   return (
-    <section className="relative w-full py-24 md:py-16 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

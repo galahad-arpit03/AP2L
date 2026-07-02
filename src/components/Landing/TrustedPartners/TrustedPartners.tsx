@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LayoutGrid, Globe, Cloud, Database, Target, Cpu, Network, Cloudy } from "lucide-react";
 
 const partners = [
-  { name: "Acme Corp" },
-  { name: "Quantum" },
-  { name: "Echo Valley" },
-  { name: "Nebula Systems" },
-  { name: "Zenith" },
-  { name: "AeroDynamics" },
-  { name: "Pinnacle" },
-  { name: "Lumina" },
+  { name: "Microsoft", icon: LayoutGrid },
+  { name: "Google", icon: Globe },
+  { name: "AWS", icon: Cloud },
+  { name: "IBM", icon: Database },
+  { name: "Oracle", icon: Target },
+  { name: "Intel", icon: Cpu },
+  { name: "Cisco", icon: Network },
+  { name: "Salesforce", icon: Cloudy },
 ];
 
 export default function TrustedPartners() {
@@ -18,40 +19,52 @@ export default function TrustedPartners() {
   const marqueePartners = [...partners, ...partners];
 
   return (
-    <section className="relative w-full overflow-hidden bg-slate-50 py-10 md:py-14">
-      <div className="relative mx-auto max-w-7xl px-4 text-center z-10">
-        <p className="mb-8 font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
-          Trusted by Innovative Teams Worldwide
-        </p>
+    <section className="relative w-full overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-500 py-12 md:py-16">
+      <div className="relative mx-auto max-w-7xl px-4 z-10">
+        
+        {/* Revamped Header */}
+        <div className="flex justify-center md:justify-start mb-10">
+          <h2 className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            Trusted by Innovative Teams Worldwide
+          </h2>
+        </div>
 
         {/* Marquee Container */}
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           
           {/* Left/Right Fade Masks */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-slate-50 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-slate-50 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent" />
 
           {/* Scrolling Content */}
           <div className="flex w-[200%] overflow-hidden">
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
               transition={{
-                duration: 25,
+                duration: 40,
                 ease: "linear",
                 repeat: Infinity,
               }}
               className="flex w-full items-center justify-around gap-12 sm:gap-24"
             >
-              {marqueePartners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center whitespace-nowrap"
-                >
-                  <h3 className="font-urbanist text-2xl font-bold tracking-tight text-slate-400/80 transition-all duration-300 hover:text-slate-900 hover:scale-105 md:text-3xl">
-                    {partner.name}
-                  </h3>
-                </div>
-              ))}
+              {marqueePartners.map((partner, index) => {
+                const Icon = partner.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center gap-3 whitespace-nowrap group cursor-default"
+                  >
+                    <Icon 
+                      size={24} 
+                      strokeWidth={1.5} 
+                      className="text-slate-400/80 dark:text-slate-600 transition-colors duration-300 group-hover:text-violet-500 dark:group-hover:text-violet-400" 
+                    />
+                    <h3 className="font-urbanist text-xl font-bold tracking-tight text-slate-400/80 dark:text-slate-600 transition-all duration-300 group-hover:text-slate-900 dark:group-hover:text-white">
+                      {partner.name}
+                    </h3>
+                  </div>
+                );
+              })}
             </motion.div>
           </div>
         </div>

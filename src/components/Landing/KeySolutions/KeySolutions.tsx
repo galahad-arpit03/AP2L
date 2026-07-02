@@ -65,7 +65,7 @@ const solutions = [
 
 export default function KeySolutions() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 xl:px-12 z-10">
         

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Star } from "lucide-react";
 
 const testimonials = [
@@ -30,7 +30,7 @@ const testimonials = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -40,19 +40,19 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20 } },
 };
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         
         {/* Header section */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-16 max-w-3xl mr-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

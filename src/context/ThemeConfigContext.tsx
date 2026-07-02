@@ -1,0 +1,39 @@
+"use client";
+
+import { createContext, useContext, useState } from "react";
+
+type ComponentThemes = Record<string, "light" | "dark" | "global">;
+
+interface ThemeConfigContextType {
+  componentThemes: ComponentThemes;
+  setComponentTheme: (id: string, theme: "light" | "dark" | "global") => void;
+  isPanelOpen: boolean;
+  setIsPanelOpen: (isOpen: boolean) => void;
+}
+
+const ThemeConfigContext = createContext<ThemeConfigContextType | undefined>(undefined);
+
+export function ThemeConfigProvider({ children }: { children: React.ReactNode }) {
+  const [componentThemes, setComponentThemes] = useState<ComponentThemes>({});
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
+
+  const setComponentTheme = (id: string, theme: "light" | "dark" | "global") => {
+    setComponentThemes((prev) => ({ ...prev, [id]: theme }));
+  };
+
+  return (
+    <ThemeConfigContext.Provider
+      value={{ componentThemes, setComponentTheme, isPanelOpen, setIsPanelOpen }}
+    >
+      {children}
+    </ThemeConfigContext.Provider>
+  );
+}
+
+export function useThemeConfig() {
+  const context = useContext(ThemeConfigContext);
+  if (context === undefined) {
+    throw new Error("useThemeConfig must be used within a ThemeConfigProvider");
+  }
+  return context;
+}

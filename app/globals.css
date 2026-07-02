@@ -18,7 +18,18 @@
   --foreground: #ededed;
 }
 
-@custom-variant dark (&:is(.dark *));
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* 
+  Trigger dark variants if .dark is an ancestor AND .light is NOT a closer ancestor. 
+  Actually, since Tailwind v4 :is() matches broadly, it's easier to just reset the variables 
+  and override dark mode context by explicitly styling the container.
+  But for dark variants, we want them to trigger ONLY if .dark is present and .light is not overriding it.
+*/
+@custom-variant dark (&:is(.dark *):not(.light *));
 
 @layer base {
   body {

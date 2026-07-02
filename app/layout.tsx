@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 import { ThemeProvider } from "@/src/components/theme-provider";
+import { ThemeConfigProvider } from "@/src/context/ThemeConfigContext";
 
 export const metadata: Metadata = {
   title: "AP2L",
@@ -29,9 +30,11 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <ThemeConfigProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </ThemeConfigProvider>
         </ThemeProvider>
       </body>
     </html>

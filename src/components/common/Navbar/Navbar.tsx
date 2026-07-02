@@ -591,10 +591,19 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
 
 
 
+import { useThemeConfig } from "@/src/context/ThemeConfigContext";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const lastScrollY = useRef(0);
+  
+  // Adapt to hero theme if not scrolled
+  const { componentThemes } = useThemeConfig();
+  const heroTheme = componentThemes["hero"] || "global";
+  
+  // If not scrolled and hero is explicitly light or dark, we force the navbar into that mode!
+  const forcedThemeClass = !scrolled && heroTheme !== "global" ? heroTheme : "";
 
   useEffect(() => {
     const onScroll = () => {
@@ -632,7 +641,7 @@ export default function Navbar() {
         duration: 0.3,
         ease: "easeOut",
       }}
-      className="fixed inset-x-0 top-0 z-50"
+      className={`fixed inset-x-0 top-0 z-50 ${forcedThemeClass}`}
     >
       <div
         className={`relative flex h-17 w-full items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ${

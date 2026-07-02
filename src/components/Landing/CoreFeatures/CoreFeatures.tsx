@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { 
   LineChart, 
   Shield, 
@@ -49,7 +49,7 @@ const features = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -59,14 +59,14 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
 };
 
 export default function CoreFeatures() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       {/* Background Accent */}
       <div className="absolute top-0 right-0 -mt-20 -mr-20 w-[400px] h-[400px] rounded-full bg-violet-500/5 dark:bg-violet-500/10 blur-[100px] pointer-events-none" />
@@ -74,7 +74,7 @@ export default function CoreFeatures() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         
         {/* Header section */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
+        <div className="mb-16 max-w-3xl mr-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

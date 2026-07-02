@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const metrics = [
   {
@@ -29,7 +29,7 @@ const metrics = [
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -39,7 +39,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8, y: 30 },
   show: { 
     opacity: 1, 
@@ -51,28 +51,16 @@ const itemVariants = {
 
 export default function ROIMetrics() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         
         {/* Header section */}
-        <div className="mb-16 text-center max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full border border-fuchsia-500/20 bg-fuchsia-500/10 px-4 py-2 mb-6"
-          >
-            <span className="font-[family-name:var(--font-manrope)] text-[11px] font-bold uppercase tracking-widest text-fuchsia-700 dark:text-fuchsia-400">
-              Proven Impact
-            </span>
-          </motion.div>
-          
+        <div className="mb-16 max-w-3xl mr-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
             className="font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl"
           >
             Measurable ROI from Day One
