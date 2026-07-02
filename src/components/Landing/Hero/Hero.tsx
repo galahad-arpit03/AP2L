@@ -19,7 +19,7 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-[calc(100vh-24px)] min-h-[600px] rounded-[16px] overflow-hidden flex flex-col items-center justify-start pt-[120px] text-center">
+    <div ref={containerRef} className="relative w-full h-[80vh] md:h-[calc(100vh-24px)] min-h-[500px] md:min-h-[600px] rounded-[16px] overflow-hidden flex flex-col items-center justify-start pt-[100px] md:pt-[120px] text-center">
       
       {/* Background Image with Parallax */}
       <motion.div 

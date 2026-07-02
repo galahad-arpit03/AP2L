@@ -403,9 +403,9 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
 
       <button
         onClick={() => setOpen(true)}
-        className="rounded-xl border border-slate-900/10 bg-slate-900/5 p-2 text-slate-900 backdrop-blur lg:hidden"
+        className="rounded-xl border border-slate-900/10 dark:border-slate-800 bg-slate-900/5 dark:bg-white/10 p-2 backdrop-blur lg:hidden transition-colors"
       >
-        <Menu size={22} />
+        <Menu size={22} className={scrolled ? "text-slate-900" : "text-slate-900 dark:text-white"} />
       </button>
 
       <AnimatePresence>
@@ -431,29 +431,29 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
                 duration: 0.35,
                 ease: "easeInOut",
               }}
-              className="fixed right-0 top-0 z-50 flex h-screen w-[340px] flex-col border-l border-slate-900/10 bg-white/95 backdrop-blur-3xl"
+              className="fixed right-0 top-0 z-50 flex h-screen w-full max-w-[340px] flex-col border-l border-slate-900/10 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-3xl"
             >
               {/* Header */}
 
-              <div className="flex items-center justify-between border-b border-slate-900/10 p-6">
+              <div className="flex items-center justify-between border-b border-slate-900/10 dark:border-slate-800 p-6">
 
                 <div>
-                  <h2 className="text-xl font-semibold text-slate-900">
+                  <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
                     Navigation
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-600">
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                     Explore AP2L
                   </p>
                 </div>
 
                 <button
                   onClick={() => setOpen(false)}
-                  className="rounded-lg p-2 transition hover:bg-slate-900/5"
+                  className="rounded-lg p-2 transition hover:bg-slate-900/5 dark:hover:bg-white/10"
                 >
                   <X
                     size={22}
-                    className="text-slate-900"
+                    className="text-slate-900 dark:text-white"
                   />
                 </button>
               </div>
@@ -480,7 +480,7 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
                         className={`mb-2 flex items-center justify-between rounded-2xl px-4 py-3 transition-all ${
                           active
                             ? "bg-violet-600/20 text-violet-300"
-                            : "text-slate-900 hover:bg-slate-900/5"
+                            : "text-slate-900 dark:text-slate-200 hover:bg-slate-900/5 dark:hover:bg-white/5"
                         }`}
                       >
                         {item.title}
@@ -499,7 +499,7 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
                         onClick={() =>
                           toggleSection(item.title)
                         }
-                        className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-slate-900 transition hover:bg-slate-900/5"
+                        className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-slate-900 dark:text-slate-200 transition hover:bg-slate-900/5 dark:hover:bg-white/5"
                       >
                         <span>{item.title}</span>
 
@@ -543,14 +543,14 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
                                     onClick={() =>
                                       setOpen(false)
                                     }
-                                    className="block rounded-xl p-3 transition hover:bg-slate-900/5"
+                                    className="block rounded-xl p-3 transition hover:bg-slate-900/5 dark:hover:bg-white/5"
                                   >
-                                    <h4 className="text-sm font-medium text-slate-900">
+                                    <h4 className="text-sm font-medium text-slate-900 dark:text-slate-200">
                                       {child.title}
                                     </h4>
 
                                     {child.description && (
-                                      <p className="mt-1 text-xs leading-5 text-slate-600">
+                                      <p className="mt-1 text-xs leading-5 text-slate-600 dark:text-slate-400">
                                         {
                                           child.description
                                         }
@@ -570,19 +570,14 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
 
               {/* Footer */}
 
-              <div className="border-t border-slate-900/10 p-6">
+              <div className="border-t border-slate-900/10 dark:border-slate-800 p-6">
 
                 <Link
-                  href="/book-demo"
+                  href="/contact"
                   onClick={() => setOpen(false)}
-                  className="group flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 font-semibold text-slate-900 transition hover:scale-[1.02]"
+                  className="group relative flex h-11 items-center justify-center rounded-full bg-slate-200 dark:bg-white px-5 text-[15px] font-semibold text-slate-800 dark:text-slate-900 transition-colors duration-300 hover:bg-slate-300 dark:hover:bg-slate-200"
                 >
-                  Book Demo
-
-                  <ArrowRight
-                    size={18}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
+                  <span className="relative z-10">Contact</span>
                 </Link>
               </div>
             </motion.aside>
