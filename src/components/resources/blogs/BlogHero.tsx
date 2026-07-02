@@ -28,7 +28,7 @@ export default function BlogHero() {
         className="absolute -left-[5%] -right-[5%] -top-[10%] h-[130%] w-[110%]"
       >
         <Image
-          src="/images/resources/blogs/bloghero-light1.png"
+          src="/images/resources/blogs/bloghero-light2.png"
           alt="AP2L Blog Hero"
           fill
           priority
