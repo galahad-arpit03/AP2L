@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const solutions = [
   {
@@ -146,8 +147,8 @@ export default function KeySolutions() {
                     </p>
                     
                     <div className="mt-6 relative w-full flex-1 min-h-[160px] rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800">
-                      <img src={solution.imageLight} alt={solution.title} className="absolute inset-0 w-full h-full object-cover dark:hidden" />
-                      <img src={solution.imageDark} alt={solution.title} className="absolute inset-0 w-full h-full object-cover hidden dark:block" />
+                      <Image src={solution.imageLight} alt={solution.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover dark:hidden" />
+                      <Image src={solution.imageDark} alt={solution.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover hidden dark:block" />
                     </div>
                     
                     <p className="mt-6 font-inter text-base leading-relaxed text-slate-600 dark:text-slate-300 max-w-3xl">
