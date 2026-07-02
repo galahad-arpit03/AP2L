@@ -400,10 +400,9 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
   return (
     <>
       {/* Hamburger */}
-
       <button
         onClick={() => setOpen(true)}
-        className="rounded-xl border border-slate-900/10 dark:border-slate-800 bg-slate-900/5 dark:bg-white/10 p-2 backdrop-blur lg:hidden transition-colors"
+        className={`rounded-xl border p-2 backdrop-blur lg:hidden transition-colors ${scrolled ? 'border-slate-200 bg-white shadow-sm' : 'border-slate-900/10 dark:border-slate-800 bg-slate-900/5 dark:bg-white/10'}`}
       >
         <Menu size={22} className={scrolled ? "text-slate-900" : "text-slate-900 dark:text-white"} />
       </button>
@@ -422,7 +421,6 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
             />
 
             {/* Drawer */}
-
             <motion.aside
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -431,7 +429,7 @@ function MobileMenu({ scrolled }: { scrolled?: boolean }) {
                 duration: 0.35,
                 ease: "easeInOut",
               }}
-              className="fixed right-0 top-0 z-50 flex h-screen w-full max-w-[340px] flex-col border-l border-slate-900/10 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-3xl"
+              className="fixed right-0 top-0 z-50 flex h-[100dvh] w-full max-w-[320px] sm:max-w-[340px] flex-col border-l border-slate-900/10 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-3xl"
             >
               {/* Header */}
 
@@ -637,7 +635,7 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50"
     >
       <div
-        className={`relative flex h-17 w-full items-center justify-between px-2 lg:px-4 transition-all duration-500 ${
+        className={`relative flex h-17 w-full items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
           scrolled
             ? `bg-white/90 dark:bg-white backdrop-blur-xl`
             : `bg-transparent`
