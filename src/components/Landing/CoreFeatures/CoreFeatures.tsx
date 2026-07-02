@@ -57,7 +57,7 @@ const containerVariants: Variants = {
       staggerChildren: 0.1,
     },
   },
-};
+} satisfies Variants;
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },

@@ -38,12 +38,15 @@ const containerVariants: Variants = {
       staggerChildren: 0.15,
     },
   },
-};
+}satisfies Variants;
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 200, damping: 20 } },
-};
+  show: { opacity: 1, y: 0, transition: {
+  duration: 0.45,
+  ease: "easeOut",
+} },
+}satisfies Variants;
 
 export default function Testimonials() {
   return (
