@@ -19,7 +19,7 @@ export default function BlogHero() {
   return (
     <section
       ref={containerRef}
-      className="relative flex h-[calc(100vh-24px)] min-h-[720px] w-full flex-col items-center justify-start overflow-hidden rounded-[16px] pt-[120px] text-center"
+      className="bg-slate-50 relative w-full h-[80vh] md:h-[calc(100vh-24px)] min-h-[500px] md:min-h-[600px] rounded-none md:rounded-[16px] overflow-hidden flex flex-col items-center justify-start pt-[100px] md:pt-[120px] text-center"
     >
       {/* Background */}
 
@@ -46,7 +46,7 @@ export default function BlogHero() {
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-white/10 dark:bg-slate-950/30" />
+      {/* <div className="absolute inset-0 bg-white/10 dark:bg-slate-950/30" /> */}
 
       {/* Glow */}
 
@@ -103,9 +103,7 @@ export default function BlogHero() {
           Ideas That Drive
           <br />
 
-          <span className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
-            Enterprise Innovation
-          </span>
+          Enterprise Innovation
         </motion.h1>
 
         {/* Description */}
@@ -219,27 +217,6 @@ export default function BlogHero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-
-      <motion.div
-        animate={{
-          y: [0, 8, 0],
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 2,
-        }}
-        className="
-          absolute
-          bottom-8
-          left-1/2
-          -translate-x-1/2
-        "
-      >
-        <div className="flex h-14 w-8 items-start justify-center rounded-full border border-slate-300 dark:border-slate-700">
-          <div className="mt-2 h-2 w-2 rounded-full bg-violet-500" />
-        </div>
-      </motion.div>
     </section>
   );
 }

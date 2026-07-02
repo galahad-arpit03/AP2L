@@ -48,15 +48,7 @@ export default function Newsletter() {
             {/* Left */}
 
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 backdrop-blur-xl dark:border-slate-700 dark:bg-slate-800/40">
-                <Bell className="h-4 w-4 text-violet-500" />
-
-                <span className="font-manrope text-[11px] font-bold uppercase tracking-[0.22em] text-slate-700 dark:text-slate-300">
-                  Stay Updated
-                </span>
-              </div>
-
-              <h2 className="mt-8 text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+              <h2 className="text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
                 Never Miss an Insight
               </h2>
 

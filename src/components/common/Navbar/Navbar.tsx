@@ -269,8 +269,8 @@ function Dropdown({
                 border
                 border-slate-900/10
                   dark:border-slate-800
-                  bg-white/40
-                  dark:bg-slate-900/40
+                  bg-white/95
+                  dark:bg-slate-900/95
                   backdrop-blur-2xl
                 shadow-[0_20px_80px_rgba(0,0,0,0.1)]
               "

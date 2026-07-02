@@ -1,95 +1,118 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Navigation } from "lucide-react";
+import { Navigation } from "lucide-react";
+import Image from "next/image";
+
+const locations = [
+  {
+    id: "chennai",
+    city: "CHENNAI",
+    address: "Office No. C315, 3rd Floor, Apeejay House,\n39/12, Haddows Road, Nungambakkam,\nChennai - 600 006",
+    phone: "+91 44 4976 5601",
+    email: "chennai@apmosys.com",
+    image: "/images/locations/chennai.png",
+  },
+  {
+    id: "bbsr",
+    city: "BHUBANESWAR",
+    address: "ApMoSys Technologies Pvt. Ltd., Fortune Towers,\n4th Floor, A Zone, Nandankanan Road,\nChandrasekharpur, Bhubaneswar - 751023, Odisha",
+    phone: "+91 674 4976 5602",
+    email: "bbsr@apmosys.com",
+    image: "/images/locations/bbsr.png",
+  },
+  {
+    id: "uae",
+    city: "UNITED ARAB EMIRATES",
+    address: "ApMoSys Technology FZ-LLC, B05-716A\nBusiness Center 04, RAKEZ Business Zone - FZ\nRAK, UAE. PO BOX 10055",
+    phone: "+971 4 4976 5603",
+    email: "uae@apmosys.com",
+    image: "/images/locations/uae.png",
+  }
+];
 
 export default function GoogleMap() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 dark:bg-slate-950">
-      {/* Background Glow */}
-
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-20 top-0 h-80 w-80 rounded-full bg-violet-500/10 blur-[120px]" />
-
-        <div className="absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-[140px]" />
-      </div>
-
+    <section className="relative overflow-hidden bg-slate-50 py-24 dark:bg-slate-950">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section Header */}
+        
+        {/* Header */}
+        <div className="mb-16 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white md:text-5xl"
+          >
+            Global Presence
+          </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto mb-16 max-w-3xl text-center"
-        >
-          {/* <div className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/50 px-4 py-2 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/40">
-            <MapPin className="h-4 w-4 text-violet-500" />
+          <motion.p 
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
+          >
+            Connect with our experts around the globe. Our distributed engineering teams are always within reach.
+          </motion.p>
+        </div>
 
-            <span className="font-manrope text-[11px] font-bold uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300">
-              Visit Our Office
-            </span>
-          </div> */}
-
-          <h2 className="mt-8 text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
-            Find Us Easily
-          </h2>
-
-          <p className="mt-6 font-manrope text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-            Our headquarters is located in Navi Mumbai. Schedule a visit or
-            connect with our team for a personalized consultation.
-          </p>
-        </motion.div>
-
-        {/* Map Card */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="overflow-hidden rounded-[32px] border border-slate-900/10 bg-white/40 shadow-[0_30px_80px_rgba(0,0,0,0.08)] backdrop-blur-2xl dark:border-slate-800 dark:bg-slate-900/40"
-        >
-          <div className="relative h-[550px] w-full overflow-hidden">
-            <iframe
-              title="AP2L Office Location"
-              src="https://www.google.com/maps?q=ApMoSys%20Technologies%20Mahape%20Navi%20Mumbai&output=embed"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 h-full w-full border-0"
-            />
-          </div>
-
-          {/* Bottom Info */}
-
-          <div className="flex flex-col gap-6 border-t border-slate-900/10 p-8 dark:border-slate-800 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
-                AP2L Technologies
-              </h3>
-
-              <p className="mt-2 font-manrope leading-7 text-slate-600 dark:text-slate-400">
-                ApMoSys Technologies Pvt. Ltd.
-                <br />
-                Mahape, Navi Mumbai,
-                Maharashtra, India
-              </p>
-            </div>
-
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-violet-500/40"
+        {/* Cards */}
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {locations.map((location, index) => (
+            <motion.div
+              key={location.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"
             >
-              <Navigation className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              {/* Image */}
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src={location.image}
+                  alt={location.city}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
 
-              Get Directions
-            </a>
-          </div>
-        </motion.div>
+              {/* Content */}
+              <div className="flex flex-1 flex-col p-8">
+                <h3 className="text-lg font-bold tracking-wider text-slate-900 dark:text-white">
+                  {location.city}
+                </h3>
+
+                <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  {location.address}
+                </p>
+
+                <div className="mt-6 flex flex-col gap-2">
+                  <a href={`tel:${location.phone.replace(/\s+/g, '')}`} className="text-sm font-semibold text-slate-800 hover:text-violet-600 dark:text-slate-200 dark:hover:text-violet-400">
+                    {location.phone}
+                  </a>
+                  <a href={`mailto:${location.email}`} className="text-sm font-semibold text-slate-800 hover:text-violet-600 dark:text-slate-200 dark:hover:text-violet-400">
+                    {location.email}
+                  </a>
+                </div>
+
+                <div className="mt-auto pt-8">
+                  <a
+                    href="https://maps.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-slate-200 py-3 text-xs font-bold uppercase tracking-wider text-slate-700 transition-colors hover:border-slate-800 hover:bg-slate-800 hover:text-white dark:border-slate-700 dark:text-slate-300 dark:hover:border-white dark:hover:bg-white dark:hover:text-slate-900"
+                  >
+                    View On Map
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

@@ -47,15 +47,6 @@ const itemVariants: Variants = {
     y: 0, 
     transition: { type: "spring", stiffness: 200, damping: 20 } 
   },
-  show: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      duration: 0.45,
-      ease: "easeOut",
-    },
-  },
 } satisfies Variants;
 
 export default function ROIMetrics() {

@@ -57,8 +57,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .6 }}
-          className="mx-auto mb-16 text-center"
+          className="mb-16 text-left"
         >
           {/* <div className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/40 px-4 py-2 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/40">
             <HelpCircle className="h-4 w-4 text-violet-500" />
@@ -72,7 +71,7 @@ export default function FAQ() {
             Everything You Need To Know
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl font-manrope text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mt-6 max-w-3xl font-manrope text-lg leading-relaxed text-slate-600 dark:text-slate-400">
             Have questions before reaching out? Here are some of the most
             common questions our customers ask.
           </p>

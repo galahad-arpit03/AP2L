@@ -13,8 +13,33 @@ interface ThemeConfigContextType {
 
 const ThemeConfigContext = createContext<ThemeConfigContextType | undefined>(undefined);
 
+const defaultThemes: ComponentThemes = {
+  // Landing Page
+  hero: "dark",
+  partners: "light",
+  platform: "light",
+  solutions: "light",
+  features: "light",
+  roi: "dark",
+  testimonials: "light",
+  cta: "light",
+
+  // Blog Page
+  blog_hero: "dark",
+  featured_blogs: "light",
+  blog_grid: "light",
+  load_more: "light",
+
+  // Contact Page
+  contact_hero: "dark",
+  contact_section: "light",
+  google_map: "light",
+  faq: "light",
+  contact_cta: "light",
+};
+
 export function ThemeConfigProvider({ children }: { children: React.ReactNode }) {
-  const [componentThemes, setComponentThemes] = useState<ComponentThemes>({});
+  const [componentThemes, setComponentThemes] = useState<ComponentThemes>(defaultThemes);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const setComponentTheme = (id: string, theme: "light" | "dark" | "global") => {

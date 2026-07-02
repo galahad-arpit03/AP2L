@@ -111,7 +111,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-slate-950 py-24">
+    <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-16">
       {/* Background */}
 
       <div className="absolute inset-0 overflow-hidden">
@@ -124,7 +124,7 @@ export default function ContactSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 
-        <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr]">
+        <div className="grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
 
           {/* LEFT PANEL */}
 
@@ -136,15 +136,14 @@ export default function ContactSection() {
             className="
               relative
               overflow-hidden
-              rounded-[32px]
+              rounded-2xl
               border
               border-slate-900/10
               dark:border-slate-800
-              bg-white/40
-              dark:bg-slate-900/40
-              backdrop-blur-2xl
-              p-8
-              lg:p-10
+              bg-slate-800
+              dark:bg-slate-900
+              p-6
+              lg:p-8
             "
           >
 
@@ -154,27 +153,15 @@ export default function ContactSection() {
 
             <div className="relative z-10">
 
-              {/* Badge */}
-
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-900/10 dark:border-slate-700 bg-white/50 dark:bg-slate-800/40 px-4 py-2 backdrop-blur-xl">
-
-                <Building2 className="h-4 w-4 text-violet-500" />
-
-                <span className="font-manrope text-[11px] font-bold uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300">
-                  Contact Information
-                </span>
-
-              </div>
-
               {/* Heading */}
 
-              <h2 className="mt-8 text-4xl font-medium tracking-tight text-slate-900 dark:text-white leading-tight">
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white leading-tight">
                 We're Here To Help
               </h2>
 
               {/* Description */}
 
-              <p className="mt-5 font-manrope text-[16px] leading-8 text-slate-600 dark:text-slate-400">
+              <p className="mt-4 text-sm leading-relaxed text-slate-300">
                 Connect with our experts to explore AI-powered enterprise
                 software, cybersecurity, cloud engineering, intelligent
                 automation and digital transformation solutions tailored to
@@ -207,12 +194,11 @@ export default function ContactSection() {
                         border
                         border-slate-900/10
                         dark:border-slate-700
-                        bg-white/50
-                        dark:bg-slate-800/50
-                        backdrop-blur-xl
+                        bg-white/10
+                        dark:bg-white/5
                       ">
                         <Icon
-                          className="h-5 w-5 text-violet-500"
+                          className="h-5 w-5 text-white"
                         />
                       </div>
 
@@ -221,11 +207,9 @@ export default function ContactSection() {
                         <p className="
                           text-[11px]
                           uppercase
-                          tracking-[0.18em]
-                          font-bold
-                          text-slate-500
-                          dark:text-slate-400
-                          font-manrope
+                          tracking-wider
+                          font-semibold
+                          text-slate-400
                         ">
                           {item.title}
                         </p>
@@ -233,10 +217,9 @@ export default function ContactSection() {
                         <p className="
                           mt-1
                           whitespace-pre-line
-                          text-[15px]
-                          leading-7
-                          text-slate-900
-                          dark:text-white
+                          text-sm
+                          leading-relaxed
+                          text-white
                           font-medium
                         ">
                           {item.value}
@@ -275,10 +258,10 @@ export default function ContactSection() {
                         border
                         border-slate-900/10
                         dark:border-slate-700
-                        bg-white/50
-                        dark:bg-slate-800/40
+                        dark:border-slate-700
+                        bg-white/5
+                        dark:bg-white/5
                         p-4
-                        backdrop-blur-xl
                       "
                     >
 
@@ -289,10 +272,10 @@ export default function ContactSection() {
                         items-center
                         justify-center
                         rounded-xl
-                        bg-violet-500/10
+                        bg-white/10
                       ">
 
-                        <Icon className="h-5 w-5 text-violet-500" />
+                        <Icon className="h-5 w-5 text-white" />
 
                       </div>
 
@@ -300,17 +283,14 @@ export default function ContactSection() {
 
                         <h4 className="
                           font-semibold
-                          text-slate-900
-                          dark:text-white
+                          text-white
                         ">
                           {item.title}
                         </h4>
 
                         <p className="
-                          mt-1
                           text-sm
-                          text-slate-600
-                          dark:text-slate-400
+                          text-slate-300
                         ">
                           {item.description}
                         </p>
@@ -339,15 +319,14 @@ export default function ContactSection() {
             className="
               relative
               overflow-hidden
-              rounded-[32px]
+              rounded-2xl
               border
               border-slate-900/10
               dark:border-slate-800
-              bg-white/50
-              dark:bg-slate-900/40
-              backdrop-blur-2xl
-              p-8
-              lg:p-10
+              bg-white
+              dark:bg-slate-900
+              p-6
+              lg:p-8
             "
           >
 
@@ -375,7 +354,7 @@ export default function ContactSection() {
                     Send Us A Message
                   </h3>
 
-                  <p className="mt-1 text-slate-600 dark:text-slate-400">
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                     Fill in your details and our team will get back to you.
                   </p>
 
@@ -400,7 +379,7 @@ export default function ContactSection() {
                       {/* First Name */}
 
                       <div>
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           First Name
                         </label>
 
@@ -423,7 +402,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -439,7 +418,7 @@ export default function ContactSection() {
                       {/* Last Name */}
 
                       <div>
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           Last Name
                         </label>
 
@@ -462,7 +441,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -483,7 +462,7 @@ export default function ContactSection() {
 
                       <div>
 
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           Company
                         </label>
 
@@ -506,7 +485,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -524,7 +503,7 @@ export default function ContactSection() {
 
                       <div>
 
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           Designation
                         </label>
 
@@ -547,7 +526,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -569,7 +548,7 @@ export default function ContactSection() {
 
                       <div>
 
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           Business Email
                         </label>
 
@@ -593,7 +572,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -611,7 +590,7 @@ export default function ContactSection() {
 
                       <div>
 
-                        <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                        <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                           Phone Number
                         </label>
 
@@ -634,7 +613,7 @@ export default function ContactSection() {
                             bg-white/70
                             dark:bg-slate-900/40
                             px-5
-                            py-4
+                            py-3
                             text-sm
                             outline-none
                             transition-all
@@ -654,7 +633,7 @@ export default function ContactSection() {
 
                     <div>
 
-                      <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                         Interested Product
                       </label>
 
@@ -676,7 +655,7 @@ export default function ContactSection() {
                           bg-white/70
                           dark:bg-slate-900/40
                           px-5
-                          py-4
+                          py-3
                           text-sm
                           outline-none
                           transition-all
@@ -707,7 +686,7 @@ export default function ContactSection() {
 
                     <div>
 
-                      <label className="mb-2 block font-manrope text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                         Tell us about your requirements
                       </label>
 
@@ -732,7 +711,7 @@ export default function ContactSection() {
                           bg-white/70
                           dark:bg-slate-900/40
                           px-5
-                          py-4
+                          py-3
                           text-sm
                           outline-none
                           transition-all
@@ -791,21 +770,19 @@ export default function ContactSection() {
                         justify-center
                         gap-2
                         rounded-full
-                        bg-gradient-to-r
-                        from-violet-600
-                        to-fuchsia-600
+                        bg-slate-800
+                        dark:bg-white
+                        dark:text-slate-900
                         px-7
                         py-4
                         text-sm
                         font-semibold
                         text-white
                         shadow-lg
-                        shadow-violet-500/25
                         transition-all
                         duration-300
                         hover:scale-[1.01]
                         hover:shadow-xl
-                        hover:shadow-fuchsia-500/30
                         active:scale-[0.99]
                         disabled:cursor-not-allowed
                         disabled:opacity-70

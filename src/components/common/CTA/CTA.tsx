@@ -55,7 +55,7 @@ export default function CTA({
             {/* Primary Button */}
             <Link
               href={primaryButtonLink}
-              className="group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-[#6d28d9] px-8 py-3.5 font-inter text-base font-medium text-white transition-all hover:bg-[#5b21b6] shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-slate-800 dark:bg-white px-8 py-3.5 font-inter text-base font-medium text-white dark:text-slate-900 transition-all hover:bg-slate-700 dark:hover:bg-slate-100 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               {primaryButtonText}
             </Link>
@@ -63,7 +63,7 @@ export default function CTA({
             {/* Secondary Button */}
             <Link
               href={secondaryButtonLink}
-              className="group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-[#6d28d9]/30 bg-transparent px-8 py-3.5 font-inter text-base font-medium text-[#6d28d9] dark:text-violet-400 transition-all hover:bg-violet-50 dark:hover:bg-violet-900/20 hover:border-[#6d28d9]/50"
+              className="group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-300 dark:border-slate-700 bg-transparent px-8 py-3.5 font-inter text-base font-medium text-slate-900 dark:text-white transition-all hover:bg-slate-50 dark:hover:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600"
             >
               {secondaryButtonText}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

@@ -22,7 +22,7 @@ const blogs = [
     title: "How AI is Transforming Enterprise Software",
     description:
       "Explore how artificial intelligence is enabling businesses to automate workflows, enhance decision making and deliver exceptional customer experiences.",
-    image: "/blogs/blog-1.jpg",
+    image: "/blogs/blog-1.png",
     readTime: "6 min read",
   },
   {
@@ -31,7 +31,7 @@ const blogs = [
     title: "Cloud Engineering Best Practices",
     description:
       "Learn how enterprises build scalable cloud-native applications with security and performance in mind.",
-    image: "/blogs/blog-2.jpg",
+    image: "/blogs/blog-2.png",
     readTime: "5 min read",
   },
   {
@@ -40,7 +40,7 @@ const blogs = [
     title: "Preparing for Modern Cyber Threats",
     description:
       "Best practices for strengthening enterprise security with modern cybersecurity strategies.",
-    image: "/blogs/blog-3.jpg",
+    image: "/blogs/blog-3.png",
     readTime: "7 min read",
   },
   {
@@ -49,7 +49,7 @@ const blogs = [
     title: "Intelligent Process Automation",
     description:
       "Discover how automation is reducing operational costs while increasing business efficiency.",
-    image: "/blogs/blog-4.jpg",
+    image: "/blogs/blog-4.png",
     readTime: "4 min read",
   },
   {
@@ -58,7 +58,7 @@ const blogs = [
     title: "Digital Transformation Roadmap",
     description:
       "A practical guide for organizations planning enterprise-wide digital transformation initiatives.",
-    image: "/blogs/blog-5.jpg",
+    image: "/blogs/blog-5.png",
     readTime: "8 min read",
   },
   {
@@ -67,35 +67,49 @@ const blogs = [
     title: "Generative AI in Business",
     description:
       "Understanding how Generative AI is creating new opportunities across enterprise ecosystems.",
-    image: "/blogs/blog-6.jpg",
+    image: "/blogs/blog-6.png",
     readTime: "5 min read",
+  },
+  {
+    id: 7,
+    category: "Cloud",
+    title: "The Shift to Serverless Architecture",
+    description:
+      "Why enterprises are adopting serverless computing to reduce operational overhead.",
+    image: "/blogs/blog-1.png",
+    readTime: "4 min read",
   },
 ];
 
+const ITEMS_PER_PAGE = 6;
+
 export default function BlogGrid() {
   const [active, setActive] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filtered =
     active === "All"
       ? blogs
       : blogs.filter((item) => item.category === active);
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const currentBlogs = filtered.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   return (
     <section className="relative bg-white py-24 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
 
-        <div className="text-center">
+        <div className="text-left mb-12">
 
-          <span className="font-manrope text-xs font-bold uppercase tracking-[0.22em] text-violet-600">
-            Browse Articles
-          </span>
-
-          <h2 className="mt-4 text-4xl font-medium tracking-tight text-slate-900 dark:text-white">
+          <h2 className="mt-4 text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
             Explore Our Knowledge Hub
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-5 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
             Expert insights on AI, cloud engineering,
             cybersecurity, enterprise software and automation.
           </p>
@@ -104,13 +118,16 @@ export default function BlogGrid() {
 
         {/* Filters */}
 
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <div className="mt-12 flex flex-wrap justify-start gap-3">
 
           {filters.map((filter) => (
 
             <button
               key={filter}
-              onClick={() => setActive(filter)}
+              onClick={() => {
+                setActive(filter);
+                setCurrentPage(1);
+              }}
               className={`rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 ${
                 active === filter
                   ? "bg-slate-900 text-white dark:bg-white dark:text-slate-900"
@@ -128,7 +145,7 @@ export default function BlogGrid() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {filtered.map((blog, index) => (
+          {currentBlogs.map((blog, index) => (
 
             <motion.article
               key={blog.id}
@@ -148,11 +165,11 @@ export default function BlogGrid() {
               whileHover={{
                 y: -8,
               }}
-              className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition-all hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"
+              className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"
             >
               {/* Image */}
 
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative h-48 w-full overflow-hidden">
 
                 <Image
                   src={blog.image}
@@ -165,7 +182,7 @@ export default function BlogGrid() {
 
               {/* Content */}
 
-              <div className="p-7">
+              <div className="p-5">
 
                 <div className="flex items-center justify-between">
 
@@ -183,17 +200,17 @@ export default function BlogGrid() {
 
                 </div>
 
-                <h3 className="mt-6 text-2xl font-semibold leading-tight text-slate-900 dark:text-white">
+                <h3 className="mt-4 text-xl font-semibold leading-tight text-slate-900 dark:text-white">
                   {blog.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                   {blog.description}
                 </p>
 
                 <Link
                   href={`/blogs/${blog.id}`}
-                  className="mt-8 inline-flex items-center gap-2 font-semibold text-violet-600 transition-all hover:gap-3"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-violet-600 transition-all hover:gap-3"
                 >
                   Read Article
 
@@ -208,6 +225,41 @@ export default function BlogGrid() {
           ))}
 
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-16 flex items-center justify-center gap-2">
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 dark:text-slate-400 dark:hover:bg-slate-800"
+            >
+              Previous
+            </button>
+
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => setCurrentPage(i + 1)}
+                className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium transition-all ${
+                  currentPage === i + 1
+                    ? "bg-slate-900 text-white shadow-md dark:bg-white dark:text-slate-900"
+                    : "text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 disabled:opacity-50 dark:text-slate-400 dark:hover:bg-slate-800"
+            >
+              Next
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
