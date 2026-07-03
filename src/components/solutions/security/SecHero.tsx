@@ -28,7 +28,7 @@ export default function SecHero() {
         className="absolute -top-[10%] -left-[5%] -right-[5%] h-[130%] w-[110%]"
       >
         <Image
-          src="/images/solutions/secHero_light.png"
+          src="/images/solutions/security_light.png"
           alt="Security Solutions"
           fill
           priority
@@ -36,7 +36,7 @@ export default function SecHero() {
         />
 
         <Image
-          src="/images/solutions/secHero_dark.png"
+          src="/images/solutions/security_dark.png"
           alt="Security Solutions Dark"
           fill
           priority

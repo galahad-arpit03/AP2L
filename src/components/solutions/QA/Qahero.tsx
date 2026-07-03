@@ -28,7 +28,7 @@ export default function QAHero() {
         className="absolute -left-[5%] -right-[5%] -top-[10%] h-[130%] w-[110%]"
       >
         <Image
-          src="/images/solutions/qahero_light.png"
+          src="/images/solutions/qalight.png"
           alt="QA Solutions"
           fill
           priority
@@ -36,7 +36,7 @@ export default function QAHero() {
         />
 
         <Image
-          src="/images/solutions/qahero_dark.png"
+          src="/images/solutions/qadark.png"
           alt="QA Solutions Dark"
           fill
           priority

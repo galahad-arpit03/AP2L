@@ -28,7 +28,7 @@ export default function DevHero() {
         className="absolute -top-[10%] -left-[5%] -right-[5%] h-[130%] w-[110%]"
       >
         <Image
-          src="/images/solutions/DevHero_light.png"
+          src="/images/solutions/devops_light.png"
           alt="DevOps Solutions"
           fill
           priority
@@ -36,7 +36,7 @@ export default function DevHero() {
         />
 
         <Image
-          src="/images/solutions/DevHero_dark.png"
+          src="/images/solutions/devops_dark.png"
           alt="DevOps Solutions Dark"
           fill
           priority
@@ -58,7 +58,7 @@ export default function DevHero() {
 
         {/* Badge */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -69,7 +69,7 @@ export default function DevHero() {
           <span className="font-manrope text-[11px] font-bold uppercase tracking-[0.22em] text-slate-700 dark:text-slate-300">
             DevOps & Cloud Engineering
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Heading */}
 
@@ -157,7 +157,7 @@ export default function DevHero() {
 
       {/* Scroll Indicator */}
 
-      <motion.div
+      {/* <motion.div
         animate={{
           y: [0, 8, 0],
         }}
@@ -170,7 +170,7 @@ export default function DevHero() {
         <div className="flex h-14 w-8 items-start justify-center rounded-full border border-slate-300 dark:border-slate-700">
           <div className="mt-2 h-2 w-2 rounded-full bg-emerald-500" />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
