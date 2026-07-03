@@ -82,9 +82,9 @@ export default function DevHero() {
           Build, Secure &
           <br />
 
-          <span className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
+          {/* <span className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent"> */}
             Deploy Faster
-          </span>
+          {/* </span> */}
         </motion.h1>
 
         {/* Description */}

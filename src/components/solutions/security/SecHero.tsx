@@ -58,7 +58,7 @@ export default function SecHero() {
 
         {/* Badge */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -69,7 +69,7 @@ export default function SecHero() {
           <span className="font-manrope text-[11px] font-bold uppercase tracking-[0.22em] text-slate-700 dark:text-slate-300">
             Security & Compliance
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Heading */}
 
@@ -82,9 +82,9 @@ export default function SecHero() {
           Protect Your
           <br />
 
-          <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
+          {/* <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent"> */}
             Digital Enterprise
-          </span>
+          {/* </span> */}
         </motion.h1>
 
         {/* Description */}
@@ -156,7 +156,7 @@ export default function SecHero() {
 
       {/* Scroll Indicator */}
 
-      <motion.div
+      {/* <motion.div
         animate={{
           y: [0, 8, 0],
         }}
@@ -169,7 +169,7 @@ export default function SecHero() {
         <div className="flex h-14 w-8 items-start justify-center rounded-full border border-slate-300 dark:border-slate-700">
           <div className="mt-2 h-2 w-2 rounded-full bg-violet-500" />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

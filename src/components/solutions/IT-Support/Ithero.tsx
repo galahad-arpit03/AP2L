@@ -82,9 +82,9 @@ export default function ITHero() {
           Modernize
           <br />
 
-          <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+          {/* <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 bg-clip-text text-transparent"> */}
             IT Support
-          </span>
+          {/* </span> */}
         </motion.h1>
 
         {/* Description */}
@@ -157,7 +157,7 @@ export default function ITHero() {
 
       {/* Scroll Indicator */}
 
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{
           repeat: Infinity,
@@ -168,7 +168,7 @@ export default function ITHero() {
         <div className="flex h-14 w-8 items-start justify-center rounded-full border border-slate-300 dark:border-slate-700">
           <div className="mt-2 h-2 w-2 rounded-full bg-cyan-500" />
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
