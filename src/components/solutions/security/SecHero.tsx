@@ -36,7 +36,7 @@ export default function SecHero() {
         />
 
         <Image
-          src="/images/solutions/security_dark.png"
+          src="/images/solutions/security_dark1.png"
           alt="Security Solutions Dark"
           fill
           priority

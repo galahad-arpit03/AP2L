@@ -36,7 +36,7 @@ export default function ITHero() {
         />
 
         <Image
-          src="/images/solutions/Ithero_dark.png"
+          src="/images/solutions/ITsupport_dark.png"
           alt="IT Support Solutions Dark"
           fill
           priority
