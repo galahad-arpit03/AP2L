@@ -45,11 +45,11 @@ export default function CTA({
             <div className={`absolute bottom-0 right-1/4 translate-x-1/3 translate-y-1/3 w-[500px] h-[500px] rounded-full blur-[100px] opacity-70 ${forceLight ? 'bg-indigo-200/30' : 'bg-indigo-200/30 dark:bg-indigo-900/20'}`} />
           </div>
 
-          <h2 className={`relative z-10 font-urbanist text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 max-w-4xl leading-tight ${forceLight ? 'text-slate-900' : 'text-slate-900 dark:text-white'}`}>
+          <h2 className={`relative z-10 text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 max-w-4xl leading-tight ${forceLight ? 'text-slate-900' : 'text-slate-900 dark:text-white'}`}>
             {headline}
           </h2>
 
-          <p className={`relative z-10 font-inter text-base md:text-lg leading-relaxed max-w-2xl mb-8 ${forceLight ? 'text-slate-600' : 'text-slate-600 dark:text-slate-300'}`}>
+          <p className={`relative z-10 text-base md:text-lg leading-relaxed max-w-2xl mb-8 ${forceLight ? 'text-slate-600' : 'text-slate-600 dark:text-slate-300'}`}>
             {description}
           </p>
 
@@ -57,7 +57,7 @@ export default function CTA({
             {/* Primary Button */}
             <Link
               href={primaryButtonLink}
-              className={`group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 font-inter text-base font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 ${forceLight ? 'bg-slate-800 text-white hover:bg-slate-700' : 'bg-slate-800 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-slate-100'}`}
+              className={`group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 text-base font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 ${forceLight ? 'bg-slate-800 text-white hover:bg-slate-700' : 'bg-slate-800 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-700 dark:hover:bg-slate-100'}`}
             >
               {primaryButtonText}
             </Link>
@@ -65,7 +65,7 @@ export default function CTA({
             {/* Secondary Button */}
             <Link
               href={secondaryButtonLink}
-              className={`group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border bg-transparent px-8 py-3.5 font-inter text-base font-medium transition-all ${forceLight ? 'border-slate-300 text-slate-900 hover:bg-slate-50 hover:border-slate-400' : 'border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600'}`}
+              className={`group relative flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border bg-transparent px-8 py-3.5 text-base font-medium transition-all ${forceLight ? 'border-slate-300 text-slate-900 hover:bg-slate-50 hover:border-slate-400' : 'border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600'}`}
             >
               {secondaryButtonText}
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

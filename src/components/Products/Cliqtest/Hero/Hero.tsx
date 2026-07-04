@@ -28,7 +28,7 @@ export default function CliqtestHero() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20 flex flex-col items-start justify-center">
           
           <div className="max-w-2xl">
-            <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-[-0.02em] font-space-grotesk">
+            <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-[-0.02em] font-space-grotesk text-white">
               {titleLine1} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6843B7] to-[#9e7be9]">{titleHighlight}</span> <br />
               {titleLine2}
