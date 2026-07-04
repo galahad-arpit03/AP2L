@@ -51,7 +51,7 @@ const industries = [
     description: "Continuous testing for rapid release cycles.",
     icon: Cpu,
     stats: "50+ releases/mo",
-    wide: false,
+    wide: true, // Now wide to match row 1 pattern
   },
   {
     id: "global",
@@ -81,7 +81,7 @@ const itemVariants: Variants = {
 export default function QAIndustries() {
   return (
     <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
-      {/* Background – only theme colors */}
+      {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-500/10 dark:bg-violet-500/20 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/3" />
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/10 dark:bg-fuchsia-500/20 rounded-full blur-[130px] translate-y-1/2 translate-x-1/3" />
@@ -95,10 +95,7 @@ export default function QAIndustries() {
           viewport={{ once: true }}
           className="text-center mb-12 max-w-3xl mx-auto"
         >
-          {/* <p className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
-            Industries
-          </p> */}
-          <h2 className="mt-4 font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+          <h2 className="font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
             Trusted Across Industries
           </h2>
           <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400">
@@ -106,7 +103,7 @@ export default function QAIndustries() {
           </p>
         </motion.div>
 
-        {/* Desktop Bento Grid – explicit layout */}
+        {/* Desktop Bento Grid – staggered layout */}
         <div className="hidden lg:grid grid-cols-3 gap-4 auto-rows-min">
           {/* Row 1: FinTech (wide) + Healthcare */}
           <motion.div
@@ -163,7 +160,7 @@ export default function QAIndustries() {
             </div>
           </motion.div>
 
-          {/* Row 2: E-commerce + Enterprise (wide) */}
+          {/* Row 2: E-commerce (normal) + Enterprise (wide) */}
           <motion.div
             variants={itemVariants}
             initial="hidden"
@@ -218,13 +215,13 @@ export default function QAIndustries() {
             </div>
           </motion.div>
 
-          {/* Row 3: SaaS + Global */}
+          {/* Row 3: SaaS (wide) + Global (normal) - matches Row 1 pattern */}
           <motion.div
             variants={itemVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="col-span-1 row-span-1 group p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 dark:hover:border-violet-600"
+            className="col-span-2 row-span-1 group p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
               <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/20 transition-transform duration-300 group-hover:scale-105">
@@ -274,7 +271,7 @@ export default function QAIndustries() {
           </motion.div>
         </div>
 
-        {/* Tablet & Mobile – 2 columns then 1 */}
+        {/* Tablet & Mobile */}
         <div className="lg:hidden">
           <motion.div
             variants={containerVariants}
@@ -314,35 +311,6 @@ export default function QAIndustries() {
             })}
           </motion.div>
         </div>
-
-        {/* Trust Badge */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 flex flex-wrap items-center justify-center gap-8 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm"
-        >
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="text-violet-600 dark:text-violet-400" size={24} />
-            <span className="font-inter text-sm text-slate-600 dark:text-slate-400">
-              500+ Enterprise Clients
-            </span>
-          </div>
-          <div className="w-px h-8 bg-slate-200 dark:bg-slate-700" />
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="text-violet-600 dark:text-violet-400" size={24} />
-            <span className="font-inter text-sm text-slate-600 dark:text-slate-400">
-              100M+ Tests Executed
-            </span>
-          </div>
-          <div className="w-px h-8 bg-slate-200 dark:bg-slate-700" />
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="text-violet-600 dark:text-violet-400" size={24} />
-            <span className="font-inter text-sm text-slate-600 dark:text-slate-400">
-              50+ Countries
-            </span>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );
