@@ -52,12 +52,14 @@ export const navigation: NavigationSection[] = [
       },
       {
         title: "For DevOps",
-        description: "Integrate security and observability into CI/CD pipelines.",
+        description:
+          "Integrate security and observability into CI/CD pipelines.",
         href: "/solutions/devops",
       },
       {
         title: "For Security & Compliance",
-        description: "Ensure regulatory readiness and vulnerability management.",
+        description:
+          "Ensure regulatory readiness and vulnerability management.",
         href: "/solutions/security-compliance",
       },
       {
@@ -73,25 +75,26 @@ export const navigation: NavigationSection[] = [
     children: [
       {
         title: "FAQ",
-        description: "Frequently asked questions about our products and services.",
+        description:
+          "Frequently asked questions about our products and services.",
         href: "/resources/faq",
       },
       {
         title: "Blog",
-        description: "Insights, updates, and technology trends from our experts.",
+        description:
+          "Insights, updates, and technology trends from our experts.",
         href: "/resources/blog",
       },
     ],
   },
 
-  {
-    title: "Pricing",
-    href: "/pricing",
-  },
+  // {
+  //   title: "Pricing",
+  //   href: "/pricing",
+  // },
 
   {
     title: "Company",
     href: "https://apmosys.com/",
   },
-
 ];
