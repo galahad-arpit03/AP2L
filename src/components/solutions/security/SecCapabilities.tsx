@@ -1,0 +1,234 @@
+"use client";
+
+import { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ShieldCheck,
+  FileCheck,
+  AlertOctagon,
+  Search,
+  Lock,
+  GitBranch,
+  CheckCircle2,
+} from "lucide-react";
+
+const capabilities = [
+  {
+    id: "sbom",
+    title: "Automated SBOM Management",
+    description: "Generate and maintain Software Bill of Materials across your entire codebase.",
+    icon: FileCheck,
+    features: ["Continuous SBOM generation", "Dependency tracking", "License compliance", "Risk scoring"],
+  },
+  {
+    id: "vulnerability",
+    title: "Continuous Vulnerability Scanning",
+    description: "Detect known vulnerabilities in real-time and prioritize based on exploitability.",
+    icon: ShieldCheck,
+    features: ["SAST & DAST integration", "Zero-day detection", "Priority-based alerts", "Automated fixes"],
+  },
+  {
+    id: "compliance",
+    title: "Compliance Automation",
+    description: "Automate evidence collection and reporting for SOC2, ISO 27001, HIPAA, GDPR.",
+    icon: AlertOctagon,
+    features: ["Pre-built control frameworks", "Continuous monitoring", "Audit-ready reports", "Policy enforcement"],
+  },
+  {
+    id: "incident",
+    title: "Intelligent Incident Response",
+    description: "AI-powered threat detection and automated playbooks for rapid mitigation.",
+    icon: Search,
+    features: ["Threat correlation", "Playbook automation", "Forensic analysis", "Integration with SIEM"],
+  },
+  {
+    id: "zero-trust",
+    title: "Zero-Trust Architecture",
+    description: "Implement least‑privilege access and continuous verification across all resources.",
+    icon: Lock,
+    features: ["Access control policies", "Identity verification", "Network segmentation", "Micro-segmentation"],
+  },
+  {
+    id: "devsecops",
+    title: "DevSecOps Pipeline Integration",
+    description: "Embed security into CI/CD with automated gates and policy-as-code.",
+    icon: GitBranch,
+    features: ["Shift-left scanning", "Security gates", "Automated compliance checks", "Infrastructure scanning"],
+  },
+];
+
+const AUTO_DELAY = 4000;
+
+export default function SecCapabilities() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const selected = capabilities[currentIndex];
+
+  const restartTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (isPaused) return;
+    timerRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % capabilities.length);
+    }, AUTO_DELAY);
+  }, [isPaused]);
+
+  useEffect(() => {
+    restartTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [currentIndex, isPaused, restartTimer]);
+
+  const handleSelect = (idx: number) => {
+    setCurrentIndex(idx);
+  };
+
+  return (
+    <section
+      className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/3" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[120px] translate-y-1/2 translate-x-1/3" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
+        <div className="mb-16 max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {/* <p className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+              Capabilities
+            </p> */}
+            <h2 className="mt-4 font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+              Enterprise‑Grade Security & Compliance
+            </h2>
+            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+              From SBOM generation to automated incident response — everything you need to secure your software supply chain.
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-stretch">
+          {/* Left list */}
+          <div className="lg:col-span-4 flex flex-col gap-3">
+            {capabilities.map((cap, idx) => {
+              const Icon = cap.icon;
+              const isSelected = currentIndex === idx;
+              return (
+                <motion.button
+                  key={cap.id}
+                  onClick={() => handleSelect(idx)}
+                  whileHover={{ x: 6 }}
+                  className={`group relative flex-1 w-full flex items-center gap-4 p-4 rounded-xl text-left transition-all duration-300 overflow-hidden ${
+                    isSelected
+                      ? "bg-white dark:bg-slate-900 shadow-lg dark:shadow-none border border-violet-200 dark:border-violet-900/50"
+                      : "bg-transparent border border-transparent hover:bg-white/50 dark:hover:bg-slate-900/50"
+                  }`}
+                >
+                  <div
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-all duration-300 ${
+                      isSelected
+                        ? "bg-violet-600 text-white shadow-lg shadow-violet-500/30"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400 group-hover:bg-slate-300 dark:group-hover:bg-slate-600"
+                    }`}
+                  >
+                    <Icon size={18} strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <h4
+                      className={`font-urbanist font-bold text-sm transition-colors ${
+                        isSelected
+                          ? "text-slate-900 dark:text-white"
+                          : "text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white"
+                      }`}
+                    >
+                      {cap.title}
+                    </h4>
+                    <p
+                      className={`text-xs transition-colors ${
+                        isSelected
+                          ? "text-slate-500 dark:text-slate-400"
+                          : "text-slate-500 dark:text-slate-500"
+                      }`}
+                    >
+                      {cap.features.length} features
+                    </p>
+                  </div>
+                  {isSelected && (
+                    <div className="absolute -right-0.5 top-1/2 -translate-y-1/2 w-1.5 h-8 rounded-l-full bg-gradient-to-b from-violet-600 to-fuchsia-600" />
+                  )}
+                  {isSelected && !isPaused && (
+                    <motion.div
+                      key={`progress-${currentIndex}`}
+                      className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-violet-600 to-fuchsia-600"
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: AUTO_DELAY / 1000, ease: "linear" }}
+                    />
+                  )}
+                </motion.button>
+              );
+            })}
+          </div>
+
+          {/* Right detail */}
+          <div className="lg:col-span-8">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selected.id}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4 }}
+                className="relative h-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg dark:shadow-none p-8 flex flex-col"
+              >
+                <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 blur-2xl" />
+                <div className="relative z-10 flex flex-col h-full overflow-y-auto">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/20">
+                      {(() => {
+                        const Icon = selected.icon;
+                        return <Icon size={28} strokeWidth={1.5} />;
+                      })()}
+                    </div>
+                    <div>
+                      <h3 className="font-urbanist text-2xl font-bold text-slate-900 dark:text-white">
+                        {selected.title}
+                      </h3>
+                      <p className="mt-1 font-inter text-sm text-slate-600 dark:text-slate-400">
+                        {selected.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                    {selected.features.map((feature, idx) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.1 }}
+                        className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
+                      >
+                        <CheckCircle2 size={16} className="text-violet-600 dark:text-violet-400 shrink-0" />
+                        <span className="font-inter text-sm text-slate-700 dark:text-slate-300">
+                          {feature}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

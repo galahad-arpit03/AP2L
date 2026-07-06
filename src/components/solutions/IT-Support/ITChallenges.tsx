@@ -1,0 +1,235 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+import {
+  Inbox,
+  MessageCircle,
+  Wrench, // ✅ changed from Tool
+  Clock,
+  AlertCircle,
+  Users,
+  ArrowRight,
+} from "lucide-react";
+
+const challenges = [
+  {
+    id: "ticket-volume",
+    title: "High Ticket Volume",
+    description: "Overwhelmed teams struggle to keep up with incoming requests.",
+    icon: Inbox,
+    impact: "70% of tickets are repetitive",
+  },
+  {
+    id: "repetitive-queries",
+    title: "Repetitive Queries",
+    description: "Agents answer the same questions repeatedly, wasting time.",
+    icon: MessageCircle,
+    impact: "40% of time spent on duplicates",
+  },
+  {
+    id: "siloed-tools",
+    title: "Siloed Tools",
+    description: "Disconnected systems create visibility gaps and slow resolution.",
+    icon: Wrench, // ✅ fixed
+    impact: "60% of teams have fragmented tools",
+  },
+  {
+    id: "resolution-time",
+    title: "Slow Resolution Times",
+    description: "Manual triage and routing delay first response and resolution.",
+    icon: Clock,
+    impact: "Mean resolution time: 24+ hours",
+  },
+  {
+    id: "user-frustration",
+    title: "User Frustration",
+    description: "Long wait times and poor self-service lead to low CSAT scores.",
+    icon: AlertCircle,
+    impact: "40% of users abandon requests",
+  },
+  {
+    id: "agent-burnout",
+    title: "Agent Burnout",
+    description: "High workload and repetitive tasks lead to team churn.",
+    icon: Users,
+    impact: "30% annual agent turnover",
+  },
+];
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0 },
+};
+
+const cardLeftVariants: Variants = {
+  hidden: { opacity: 0, x: -40 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const cardRightVariants: Variants = {
+  hidden: { opacity: 0, x: 40 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+export default function ITChallenges() {
+  return (
+    <section className="relative w-full py-10 md:py-16 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3" />
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-violet-500/10 dark:bg-violet-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-4 lg:px-8 z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {/* <p className="font-inter text-xs font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+              The Challenges
+            </p> */}
+            <h2 className="mt-2 font-urbanist text-3xl md:text-4xl font-medium tracking-tight text-slate-900 dark:text-white">
+              IT Support Bottlenecks
+            </h2>
+            <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Modern IT teams are overwhelmed by high ticket volumes,
+              repetitive queries, and disconnected tools that slow everything down.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Split Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+          {/* Left Card – Support Bottlenecks */}
+          <motion.div
+            variants={cardLeftVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow duration-300 p-6 lg:p-8 flex flex-col"
+          >
+            <div className="mb-6">
+              <h3 className="font-urbanist text-xl font-bold text-slate-900 dark:text-white">
+                Support Bottlenecks
+              </h3>
+              <p className="font-inter text-sm text-slate-600 dark:text-slate-400 mt-1">
+                Common challenges slowing down IT support teams.
+              </p>
+            </div>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="flex-1 space-y-1"
+            >
+              {challenges.slice(0, 3).map((challenge) => {
+                const Icon = challenge.icon;
+                return (
+                  <motion.div
+                    key={challenge.id}
+                    variants={itemVariants}
+                    className="group flex items-start gap-3 py-3 border-b border-slate-100 dark:border-slate-800 last:border-0 hover:pl-2 transition-all duration-200"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400 transition-all duration-300 group-hover:bg-violet-600 dark:group-hover:bg-violet-500 group-hover:text-white">
+                      <Icon size={16} strokeWidth={1.5} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-urbanist text-sm font-semibold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                        {challenge.title}
+                      </h4>
+                      <p className="font-inter text-xs text-slate-500 dark:text-slate-400 leading-tight">
+                        {challenge.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+
+          {/* Right Card – Business Impact */}
+          <motion.div
+            variants={cardRightVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="bg-violet-600 dark:bg-violet-700 rounded-2xl border border-violet-400/20 shadow-2xl shadow-violet-500/20 p-6 lg:p-8 flex flex-col text-white"
+          >
+            <div className="mb-6">
+              <h3 className="font-urbanist text-xl font-bold">Business Impact</h3>
+              <p className="font-inter text-sm text-white/80 mt-1">
+                These challenges directly affect cost, employee satisfaction, and productivity.
+              </p>
+            </div>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="flex-1 space-y-4"
+            >
+              {challenges.slice(3, 6).map((challenge) => (
+                <motion.div
+                  key={challenge.id}
+                  variants={itemVariants}
+                  className="flex items-start gap-3 border-b border-white/10 last:border-0 pb-3 last:pb-0"
+                >
+                  <div className="relative h-3 w-3 mt-1.5 flex items-center justify-center">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-300 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-urbanist text-lg font-bold">
+                      {challenge.impact}
+                    </div>
+                    <p className="font-inter text-sm text-white/80 leading-tight">
+                      {challenge.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Bottom CTA (optional – uncomment if needed) */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <p className="font-inter text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Every challenge above is addressed through AP2L's intelligent IT support platform.
+          </p>
+          <div className="mt-6">
+            <a
+              href="#capabilities"
+              className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:scale-105 hover:shadow-violet-500/50"
+            >
+              Explore Our Solutions →
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </motion.div> */}
+      </div>
+    </section>
+  );
+}
