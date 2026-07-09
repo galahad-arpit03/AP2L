@@ -18,6 +18,7 @@ import { ThemeProvider } from "@/src/components/theme-provider";
 import { ThemeConfigProvider } from "@/src/context/ThemeConfigContext";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ap2l.ai"),
   title: {
     default: "AP2L | AI-Powered Enterprise Software & Cloud Solutions",
     template: "%s | AP2L",

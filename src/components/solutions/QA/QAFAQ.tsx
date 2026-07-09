@@ -47,7 +47,7 @@ export default function QAFAQ() {
   };
 
   return (
-    <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -55,25 +55,33 @@ export default function QAFAQ() {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[130px] translate-y-1/2 -translate-x-1/3" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-4 lg:px-8 z-10">
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
-              FAQ
-            </p>
-            <h2 className="mt-4 font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+        {/* Header section */}
+        <div className="mb-10 md:mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6 md:mb-0"
+            >
               Frequently Asked Questions
-            </h2>
-            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            </motion.h2>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="font-manrope text-lg md:text-[20px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
+            >
               Everything you need to know about AP2L's QA and testing solutions.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
         </div>
 
         {/* FAQ List */}
@@ -91,9 +99,9 @@ export default function QAFAQ() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none group"
                 >
-                  <span className="font-urbanist font-semibold text-slate-900 dark:text-white pr-8 text-sm md:text-base">
+                  <span className="font-urbanist font-semibold text-black dark:text-white pr-8 text-sm md:text-base">
                     {faq.question}
                   </span>
                   <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
@@ -144,7 +152,7 @@ export default function QAFAQ() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:scale-105 hover:shadow-violet-500/50"
+            className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:scale-105 hover:shadow-violet-500/50"
           >
             Contact Our QA Experts
             <HelpCircle size={16} />

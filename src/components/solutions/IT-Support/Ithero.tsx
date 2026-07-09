@@ -77,7 +77,7 @@ export default function ITHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="mt-8 text-5xl font-medium leading-[1.08] tracking-tight text-slate-900 dark:text-white md:text-7xl"
+          className="mt-8 text-5xl font-medium leading-[1.08] tracking-tight text-black dark:text-white md:text-7xl"
         >
           Modernize
           <br />
@@ -110,7 +110,7 @@ export default function ITHero() {
         >
           <Link
             href="/contact"
-            className="group inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 dark:bg-white dark:text-slate-900"
+            className="group inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-3.5 md:py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 dark:bg-white dark:text-slate-900"
           >
             Explore IT Support
 
@@ -124,7 +124,7 @@ export default function ITHero() {
                 behavior: "smooth",
               })
             }
-            className="rounded-full border border-slate-300 bg-white/60 px-8 py-4 text-sm font-semibold text-slate-900 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/80 dark:border-slate-700 dark:bg-slate-900/40 dark:text-white"
+            className="rounded-full border border-slate-300 bg-white/60 px-8 py-3.5 md:py-4 text-sm font-semibold text-slate-900 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/80 dark:border-slate-700 dark:bg-slate-900/40 dark:text-white"
           >
             View Services
           </button>

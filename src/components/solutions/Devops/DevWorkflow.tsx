@@ -69,22 +69,30 @@ export default function DevWorkflow() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         {/* Header - Centered, white text */}
-        <div className="mb-12 text-center max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {/* <p className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-violet-400">
-              How We Solve
-            </p> */}
-            <h2 className="mt-4 font-urbanist text-4xl font-medium tracking-tight text-white md:text-5xl">
+        {/* Header section */}
+        <div className="mb-10 md:mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-white mb-6 md:mb-0"
+            >
               End-to-End DevOps Workflow
-            </h2>
-            <p className="mt-6 font-inter text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            </motion.h2>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="font-manrope text-lg md:text-[20px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
+            >
               From code commit to production — AP2L automates and secures every step.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
         </div>
 
         {/* Horizontal Workflow Steps */}
@@ -156,7 +164,7 @@ export default function DevWorkflow() {
           </div>
           <a
             href="/contact"
-            className="group flex items-center gap-2 whitespace-nowrap rounded-full bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:scale-105 hover:shadow-violet-500/50"
+            className="group flex items-center gap-2 whitespace-nowrap rounded-full bg-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:scale-105 hover:shadow-violet-500/50"
           >
             Book a Demo
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

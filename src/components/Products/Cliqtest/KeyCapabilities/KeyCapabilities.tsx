@@ -37,13 +37,32 @@ export default function KeyCapabilities() {
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#9e7be9]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-left max-w-3xl mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Intelligence built into <span className="text-[#a855f7]">every layer</span>
-          </h2>
-          <p className="text-lg text-slate-600 font-manrope leading-relaxed">
-            Capabilities designed to empower your QA teams and accelerate your release cycles.
-          </p>
+        {/* Header section */}
+        <div className="mb-8 md:mb-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-black mb-6">
+                Intelligence built into <span className="text-[#a855f7]">every layer</span>
+              </h2>
+            </motion.div>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="font-manrope text-xl md:text-[22px] text-slate-700 dark:text-slate-600 leading-relaxed max-w-2xl">
+                Capabilities designed to empower your QA teams and accelerate your release cycles.
+              </p>
+            </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

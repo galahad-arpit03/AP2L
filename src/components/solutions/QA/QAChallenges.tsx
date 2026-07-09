@@ -83,7 +83,7 @@ const cardRightVariants: Variants = {
 
 export default function QAChallenges() {
   return (
-    <section className="relative w-full py-10 md:py-16 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
@@ -93,20 +93,31 @@ export default function QAChallenges() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         {/* Header - Left Aligned (matching capabilities) */}
-        <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-urbanist text-3xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white">
-              What's Holding Your QA Back?
-            </h2>
-            <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+        {/* Header section */}
+        <div className="mb-10 md:mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6 md:mb-0"
+            >
+              What&apos;s Holding Your QA Back?
+            </motion.h2>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="font-manrope text-lg md:text-[20px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
+            >
               Modern QA teams face critical challenges that impact quality, speed,
-              and business outcomes. Here's what's slowing you down.
-            </p>
-          </motion.div>
+              and business outcomes. Here&apos;s what&apos;s slowing you down.
+            </motion.p>
+          </div>
         </div>
 
         {/* Split Cards */}
@@ -120,7 +131,7 @@ export default function QAChallenges() {
             className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-shadow duration-300 p-6 lg:p-8 flex flex-col"
           >
             <div className="mb-6">
-              <h3 className="font-urbanist text-xl font-bold text-slate-900 dark:text-white">
+              <h3 className="font-urbanist text-xl font-bold text-black dark:text-white">
                 Quality Engineering Challenges
               </h3>
               <p className="font-inter text-sm text-slate-600 dark:text-slate-400 mt-1">
@@ -147,7 +158,7 @@ export default function QAChallenges() {
                       <Icon size={16} strokeWidth={1.5} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-urbanist text-sm font-semibold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                      <h4 className="font-urbanist text-sm font-semibold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                         {challenge.title}
                       </h4>
                       <p className="font-inter text-xs text-slate-500 dark:text-slate-400 leading-tight">
@@ -166,8 +177,11 @@ export default function QAChallenges() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-violet-600 dark:bg-violet-700 rounded-2xl border border-violet-400/20 shadow-2xl shadow-violet-500/20 p-6 lg:p-8 flex flex-col text-white"
+            className="relative overflow-hidden bg-[#161221] rounded-2xl border border-violet-400/20 shadow-2xl shadow-violet-500/20 p-6 lg:p-8 flex flex-col text-white"
           >
+            {/* Ray of light effect */}
+            <div className="absolute top-0 right-0 w-[150%] h-[150%] bg-gradient-to-bl from-white/20 via-transparent to-transparent pointer-events-none -translate-y-1/2 translate-x-1/4 rotate-12 blur-lg" />
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/20 rounded-full blur-3xl pointer-events-none" />
             <div className="mb-6">
               <h3 className="font-urbanist text-xl font-bold">Business Impact</h3>
               <p className="font-inter text-sm text-white/80 mt-1">

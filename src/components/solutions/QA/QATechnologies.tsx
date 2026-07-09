@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function QATechnologies() {
   return (
-    <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
@@ -14,19 +14,30 @@ export default function QATechnologies() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
         {/* Header – Centered */}
-        <div className="mb-12 max-w-3xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+        {/* Header section */}
+        <div className="mb-10 md:mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6 md:mb-0"
+            >
               Compatible with Your Stack
-            </h2>
-            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            </motion.h2>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="font-manrope text-lg md:text-[20px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
+            >
               cliQTest works with the technologies you already use. No migration required.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
         </div>
 
         {/* Full‑width Image – fills the container width */}

@@ -72,29 +72,37 @@ const itemVariants: Variants = {
 
 export default function SecMetrics() {
   return (
-    <section className="relative w-full py-16 md:py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-12 md:py-16 bg-slate-50 dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-violet-500/5 dark:bg-violet-500/10 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/3" />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/5 dark:bg-fuchsia-500/10 rounded-full blur-[130px] translate-y-1/2 translate-x-1/3" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
-        <div className="mb-16 max-w-3xl text-center mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {/* <p className="font-inter text-sm font-bold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
-              Metrics
-            </p> */}
-            <h2 className="mt-4 font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
+        {/* Header section */}
+        <div className="mb-10 md:mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6 md:mb-0"
+            >
               Measurable Security Impact
-            </h2>
-            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            </motion.h2>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="font-manrope text-lg md:text-[20px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
+            >
               Real metrics from enterprises using AP2L's security and compliance platform.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
         </div>
 
         <motion.div
@@ -120,7 +128,7 @@ export default function SecMetrics() {
                   <div className="font-urbanist text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-br from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
                     {metric.value}
                   </div>
-                  <h3 className="mt-1 font-urbanist text-base font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                  <h3 className="mt-1 font-urbanist text-base font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                     {metric.label}
                   </h3>
                   <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -141,7 +149,7 @@ export default function SecMetrics() {
         >
           <p className="font-inter text-sm text-slate-600 dark:text-slate-400">
             <span className="font-semibold text-violet-600 dark:text-violet-400">Trusted by leading enterprises</span> — Average security team sees{' '}
-            <span className="font-semibold text-slate-900 dark:text-white">4x ROI</span> in first year.
+            <span className="font-semibold text-black dark:text-white">4x ROI</span> in first year.
           </p>
         </motion.div> */}
       </div>

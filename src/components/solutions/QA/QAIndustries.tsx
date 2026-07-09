@@ -87,20 +87,33 @@ export default function QAIndustries() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
-        {/* Header – Left Aligned */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-10 max-w-3xl"
-        >
-          <h2 className="font-urbanist text-3xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white">
-            Trusted Across Industries
-          </h2>
-          <p className="mt-3 font-inter text-base text-slate-600 dark:text-slate-400">
-            From FinTech to Healthcare, organizations worldwide rely on AP2L for quality assurance.
-          </p>
-        </motion.div>
+        {/* Header section */}
+        <div className="mb-8 md:mb-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6">
+                Trusted Across Industries
+              </h2>
+            </motion.div>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="font-manrope text-xl md:text-[22px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl">
+                From FinTech to Healthcare, organizations worldwide rely on AP2L for quality assurance.
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Desktop Bento Grid – staggered layout */}
         <div className="hidden lg:grid grid-cols-3 gap-3 auto-rows-min">
@@ -117,7 +130,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Wallet size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 FinTech & Banking
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -143,7 +156,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Stethoscope size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 Healthcare
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -170,7 +183,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <ShoppingCart size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 E‑commerce & Retail
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -196,7 +209,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Building2 size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 Enterprise Software
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -223,7 +236,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Cpu size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 SaaS & Technology
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -249,7 +262,7 @@ export default function QAIndustries() {
               <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Globe2 size={24} strokeWidth={1.5} />
               </div>
-              <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+              <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 Global Enterprises
               </h3>
               <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
@@ -272,7 +285,7 @@ export default function QAIndustries() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl"
           >
             {industries.map((industry) => {
               const Icon = industry.icon;
@@ -286,7 +299,7 @@ export default function QAIndustries() {
                     <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                       <Icon size={24} strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                    <h3 className="font-urbanist text-lg font-bold text-black dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                       {industry.name}
                     </h3>
                     <p className="mt-1 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">

@@ -13,21 +13,33 @@ export default function QABenefits() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10"
-        >
-          <h2 className="font-urbanist text-4xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white">
-            Benefits of AI-Powered Testing
-          </h2>
-          <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Real results from enterprise QA teams using AP2L's AI-powered testing platform.
-          </p>
-        </motion.div>
+        {/* Header section */}
+        <div className="mb-8 md:mb-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-white mb-6">
+                Benefits of AI-Powered Testing
+              </h2>
+            </motion.div>
+          </div>
+          
+          <div className="md:pt-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="font-manrope text-xl md:text-[22px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl">
+                Real results from enterprise QA teams using AP2L's AI-powered testing platform.
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Full-Width Image Container (within margins) */}
         <motion.div

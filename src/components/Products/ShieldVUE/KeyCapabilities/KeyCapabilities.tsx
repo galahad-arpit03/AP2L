@@ -22,17 +22,35 @@ export default function KeyCapabilities() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-[120px] translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Header section */}
+        <div className="mb-8 md:mb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <h2 className="text-3xl md:text-5xl font-semibold mb-6 leading-tight">
-              Powerful Capabilities for <span className="text-violet-400">Total Security</span>
-            </h2>
-            <p className="text-lg text-slate-400 font-manrope leading-relaxed mb-8">
-              A comprehensive suite of tools designed to discover, track, and remediate vulnerabilities across your entire software supply chain.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-white mb-6">
+                Powerful Capabilities for <span className="text-violet-400">Total Security</span>
+              </h2>
+            </motion.div>
           </div>
+          
+          <div className="md:pt-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <p className="font-manrope text-xl md:text-[22px] text-slate-300 leading-relaxed max-w-2xl">
+                A comprehensive suite of tools designed to discover, track, and remediate vulnerabilities across your entire software supply chain.
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {capabilities.map((cap, index) => {
               const [title, desc] = cap.split(": ");
               return (
@@ -55,7 +73,6 @@ export default function KeyCapabilities() {
               );
             })}
           </div>
-        </div>
       </div>
     </section>
   );
