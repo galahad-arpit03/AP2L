@@ -91,24 +91,18 @@ export default function QAChallenges() {
         <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-violet-500/10 dark:bg-violet-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 lg:px-8 z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
+        {/* Header - Left Aligned (matching capabilities) */}
+        <div className="mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            {/* Category Badge */}
-            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400 text-xs font-semibold tracking-wider uppercase mb-4">
-              <AlertTriangle size={14} />
-              The Challenges
-            </div> */}
-            
-            <h2 className="font-urbanist text-3xl md:text-4xl font-medium tracking-tight text-slate-900 dark:text-white">
+            <h2 className="font-urbanist text-3xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white">
               What's Holding Your QA Back?
             </h2>
-            <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="mt-4 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
               Modern QA teams face critical challenges that impact quality, speed,
               and business outcomes. Here's what's slowing you down.
             </p>
@@ -211,25 +205,6 @@ export default function QAChallenges() {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Bottom CTA */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
-        >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-violet-50 to-fuchsia-50 dark:from-violet-900/20 dark:to-fuchsia-900/20 border border-violet-200/50 dark:border-violet-800/50">
-            <AlertTriangle size={16} className="text-violet-500 dark:text-violet-400" />
-            <p className="font-inter text-sm text-slate-600 dark:text-slate-300">
-              <span className="font-semibold text-violet-600 dark:text-violet-400">
-                {challenges.length} critical challenges
-              </span>
-              <span className="mx-2 text-slate-300 dark:text-slate-600">•</span>
-              All solved with AP2L's AI-powered testing platform
-            </p>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );

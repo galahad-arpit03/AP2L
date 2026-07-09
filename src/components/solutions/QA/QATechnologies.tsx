@@ -13,8 +13,8 @@ export default function QATechnologies() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 z-10">
-        {/* Header */}
-        <div className="mb-12 max-w-3xl text-center mx-auto">
+        {/* Header – Centered */}
+        <div className="mb-12 max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,24 +23,24 @@ export default function QATechnologies() {
             <h2 className="font-urbanist text-4xl font-medium tracking-tight text-slate-900 dark:text-white md:text-5xl">
               Compatible with Your Stack
             </h2>
-            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="mt-6 font-inter text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
               cliQTest works with the technologies you already use. No migration required.
             </p>
           </motion.div>
         </div>
 
-        {/* Full-width Image - now uses aspect ratio matching the image (3:2) and object-cover to fill container */}
+        {/* Full‑width Image – fills the container width */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative w-full max-w-6xl mx-auto"
+          className="relative w-full"
         >
           <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-slate-900">
             {/* Light mode image */}
             <Image
-              src="/images/solutions/technologies_light.png"
+              src="/images/solutions/QA/technologies.png"
               alt="Technologies compatible with cliQTest"
               fill
               className="object-cover dark:hidden"
@@ -48,7 +48,7 @@ export default function QATechnologies() {
             />
             {/* Dark mode image */}
             <Image
-              src="/images/solutions/technologies.png"
+              src="/images/solutions/QA/technologies_dark.png"
               alt="Technologies compatible with cliQTest"
               fill
               className="object-cover hidden dark:block"
