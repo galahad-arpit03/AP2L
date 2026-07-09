@@ -29,7 +29,7 @@ export default function FinxploreHero() {
         <div className="max-w-3xl">
           <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-[-0.02em] text-white">
             {titleLine1} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9e7be9] to-[#6843B7]">{titleHighlight}</span> <br />
+            {titleHighlight} <br />
             {titleLine2}
           </h1>
           <p className="text-base md:text-lg text-white/80 mb-10 max-w-xl font-manrope leading-relaxed">
