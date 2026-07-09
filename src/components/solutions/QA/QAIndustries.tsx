@@ -113,7 +113,8 @@ export default function QAIndustries() {
             className="col-span-2 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              {/* Hollow icon container */}
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Wallet size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -139,7 +140,7 @@ export default function QAIndustries() {
             className="col-span-1 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Stethoscope size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -166,7 +167,7 @@ export default function QAIndustries() {
             className="col-span-1 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <ShoppingCart size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -192,7 +193,7 @@ export default function QAIndustries() {
             className="col-span-2 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Building2 size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -219,7 +220,7 @@ export default function QAIndustries() {
             className="col-span-2 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Cpu size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -245,7 +246,7 @@ export default function QAIndustries() {
             className="col-span-1 row-span-1 group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
           >
             <div className="relative z-10">
-              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                 <Globe2 size={24} strokeWidth={1.5} />
               </div>
               <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
@@ -282,7 +283,7 @@ export default function QAIndustries() {
                   className="group p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-300 dark:hover:border-violet-600"
                 >
                   <div className="relative z-10">
-                    <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md transition-transform duration-300 group-hover:scale-105">
+                    <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-violet-600 dark:border-violet-400 text-violet-600 dark:text-violet-400 transition-transform duration-300 group-hover:scale-105 group-hover:border-violet-700 dark:group-hover:border-violet-300">
                       <Icon size={24} strokeWidth={1.5} />
                     </div>
                     <h3 className="font-urbanist text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
