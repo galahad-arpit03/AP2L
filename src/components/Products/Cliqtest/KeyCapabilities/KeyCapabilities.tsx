@@ -46,7 +46,7 @@ export default function KeyCapabilities() {
               viewport={{ once: true }}
             >
               <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-black mb-6">
-                Intelligence built into <span className="text-[#a855f7]">every layer</span>
+                Intelligence built into <span className="text-[#ffffff]">every layer</span>
               </h2>
             </motion.div>
           </div>
