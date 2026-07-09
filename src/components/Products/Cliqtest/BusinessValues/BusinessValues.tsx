@@ -38,7 +38,7 @@ export default function BusinessValues() {
               viewport={{ once: true }}
             >
               <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-black mb-6">
-                Unmatched <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6843B7] to-[#9e7be9]">Testing Velocity</span>
+                Unmatched <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#000000] to-[#000000]">Testing Velocity</span>
               </h2>
             </motion.div>
           </div>

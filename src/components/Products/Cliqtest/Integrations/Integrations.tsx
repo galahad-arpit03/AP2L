@@ -22,7 +22,7 @@ export default function Integrations() {
               viewport={{ once: true }}
             >
               <h2 className="font-urbanist text-4xl md:text-5xl lg:text-[56px] leading-tight font-medium tracking-tight text-black dark:text-black mb-6">
-                Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6843B7] to-[#9e7be9]">Ecosystem Integration</span>
+                Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#000000] to-[#000000]">Ecosystem Integration</span>
               </h2>
             </motion.div>
           </div>
