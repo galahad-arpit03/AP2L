@@ -111,7 +111,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-16">
+    <section id="contact-form" className="relative overflow-hidden bg-slate-50 dark:bg-slate-950 py-16">
       {/* Background */}
 
       <div className="absolute inset-0 overflow-hidden">

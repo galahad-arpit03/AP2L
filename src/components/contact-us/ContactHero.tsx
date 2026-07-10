@@ -16,6 +16,18 @@ export default function ContactHero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
+  // Smooth scroll to contact form
+  const scrollToContactForm = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <section
       ref={containerRef}
@@ -141,8 +153,9 @@ Helping businesses accelerate digital transformation through AI, cloud, and cybe
           }}
           className="mt-12 flex flex-col gap-4 sm:flex-row"
         >
-          <Link
-            href="/book-demo"
+          <a
+            href="#contact-form"
+            onClick={scrollToContactForm}
             className="
               group
               inline-flex
@@ -162,12 +175,13 @@ Helping businesses accelerate digital transformation through AI, cloud, and cybe
               hover:opacity-95
               dark:bg-white
               dark:text-slate-900
+              cursor-pointer
             "
           >
             Book a Demo
 
             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          </a>
 
           <Link
             href="/products"
