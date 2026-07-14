@@ -22,6 +22,7 @@ export function ThemeProvider({
 }: {
   children: React.ReactNode;
   defaultTheme?: Theme;
+  [key: string]: any;
 }) {
   const [theme, setThemeState] = React.useState<Theme>(defaultTheme);
 
