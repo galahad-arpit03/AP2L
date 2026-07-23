@@ -236,7 +236,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_60%)]" />
       </div>
 
-      <div className="relative z-10 w-full px-2 lg:px-4">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ================= Footer Grid ================= */}
 

@@ -629,7 +629,7 @@ export default function Navbar() {
       className={`fixed inset-x-0 top-0 z-50 ${forcedThemeClass}`}
     >
       <div
-        className={`relative flex h-17 w-full items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
+        className={`relative flex h-17 w-full max-w-[1600px] mx-auto items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
           scrolled
             ? `bg-white/90 dark:bg-white backdrop-blur-xl`
             : pathname === "/resources/faq" ? `bg-[#090A1F]` : `bg-transparent`

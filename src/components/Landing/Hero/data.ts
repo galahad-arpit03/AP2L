@@ -8,7 +8,7 @@ export interface HeroData {
 
 export const heroData: HeroData = {
   heading: "Elevate Your Enterprise",
-  description: "Empower your organization with intelligent automation, cloud solutions, and next-generation AI platforms built for tomorrow.",
+  description: "Empowering enterprises with AI-driven innovation, intelligent automation, and cloud-native platforms that accelerate digital transformation, strengthen operational resilience, and unlock sustainable growth.",
   primaryButton: "Explore Products",
   primaryButtonLink: "/#products",
   backgroundImage: "/landing-hero/light-hero.png"

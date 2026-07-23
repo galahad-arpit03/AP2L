@@ -15,37 +15,37 @@ const features = [
   {
     id: "predictive-analytics",
     title: "Predictive Analytics",
-    description: "AI-driven forecasting and anomaly detection to identify and resolve issues before they impact your users.",
+    description: "Leverage AI-powered predictive analytics and intelligent anomaly detection to proactively identify, assess, and resolve potential issues before they impact business operations or user experience.",
     icon: LineChart,
   },
   {
     id: "zero-trust",
     title: "Zero-Trust Security",
-    description: "Continuous vulnerability scanning, advanced SBOM management, and automated remediation workflows.",
+    description: "Strengthen your security posture with continuous vulnerability assessment, comprehensive SBOM management, and intelligent remediation workflows that proactively mitigate software supply chain risks.",
     icon: Shield,
   },
   {
     id: "automated-qa",
     title: "Automated QA",
-    description: "No-code testing and intelligent test generation that scales effortlessly with your deployment velocity.",
+    description: "Accelerate software quality with AI-powered test generation, no-code automation, and scalable testing capabilities designed to support modern, high-velocity development environments.",
     icon: CheckCircle2,
   },
   {
     id: "observability",
     title: "Real-Time Observability",
-    description: "End-to-end tracing, centralized logging, and high-fidelity performance metrics delivered in real-time.",
+    description: "Gain complete operational visibility through end-to-end distributed tracing, centralized log management, and real-time performance insights that enable proactive monitoring and faster issue resolution.",
     icon: Activity,
   },
   {
     id: "integrations",
     title: "Seamless Integrations",
-    description: "Native, one-click connectors for AWS, Azure, Jira, Slack, and your entire existing CI/CD toolchain.",
+    description: "Seamlessly integrate with leading cloud platforms, enterprise applications, and DevSecOps toolchains through native connectors and robust integration capabilities.",
     icon: Combine,
   },
   {
     id: "performance",
     title: "High Performance",
-    description: "Built on a resilient, globally distributed edge architecture ensuring 99.99% uncompromising uptime.",
+    description: "Engineered on a resilient, globally distributed architecture to deliver exceptional performance, high availability, and enterprise-grade reliability for mission-critical operations.",
     icon: Zap,
   }
 ];
@@ -105,8 +105,7 @@ export default function CoreFeatures() {
               transition={{ delay: 0.2 }}
               className="font-manrope text-xl md:text-[22px] text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl"
             >
-              Everything you need to build, secure, and scale high-performance infrastructure with absolute confidence.
-            </motion.p>
+A unified enterprise platform designed to help organizations build resilient systems, strengthen security, optimize performance, and scale with confidence.            </motion.p>
           </div>
         </div>
 

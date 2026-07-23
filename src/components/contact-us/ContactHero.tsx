@@ -21,7 +21,7 @@ export default function ContactHero() {
   return (
     <section
       ref={containerRef}
-      className="bg-slate-50 relative w-full h-[80vh] md:min-h-screen min-h-[500px] md:min-h-[600px] rounded-none md: overflow-hidden flex flex-col items-center justify-start pt-[100px] md:pt-[120px] text-center"
+      className="bg-slate-50 relative w-full h-[80vh] md:min-h-screen min-h-[500px] md:min-h-[600px] rounded-none overflow-hidden flex flex-col items-center justify-center pt-[64px] text-center"
     >
       {/* Background Image */}
 

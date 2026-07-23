@@ -16,7 +16,7 @@ export default function ThemeBuilder({ components }: ThemeBuilderProps) {
   };
 
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] flex items-center">
+    <div className="hidden fixed right-4 top-1/2 -translate-y-1/2 z-[100] flex items-center">
       <AnimatePresence>
         {isPanelOpen && (
           <motion.div
